@@ -466,7 +466,7 @@
                 font-size: 2.5rem;
                 color: #fff;
                 text-shadow: 3px 3px 0 #333;
-                text-align: right; }
+                text-align: center; }
             #portfol-area > .p-wrap-box > .p-right-box > .first-area > .sec03 > .scroll-area > .area02 {
               width: 80%;
               height: 50%;
@@ -637,15 +637,23 @@
         height: auto;
         min-height: 1000px;
         min-height: 62.5rem;
-        background-color: #eee; }
+        background-color: #edd; }
         #portfol-area > .p-wrap-box > .p-right-box > .secound-area > p {
+          padding: 30px;
+          padding: 1.875rem;
           width: 80%;
           height: 100px;
           height: 6.25rem;
           margin: auto;
           margin-bottom: 50px;
           margin-bottom: 3.125rem;
-          background-color: #fff; }
+          background-color: rgba(255, 255, 255, 0.5);
+          font-size: 30px;
+          font-size: 1.875rem;
+          text-align: center;
+          line-height: 100px;
+          line-height: 6.25rem;
+          color: #333; }
         #portfol-area > .p-wrap-box > .p-right-box > .secound-area > .sec01 {
           width: 100%;
           height: auto;
@@ -663,14 +671,26 @@
             width: 50%;
             height: 400px;
             height: 25rem;
-            background-color: #fff; }
+            background-image: url("../../img/portfolio/secound/secound-wire-frame.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%; }
           #portfol-area > .p-wrap-box > .p-right-box > .secound-area > .sec01 > .produc-area {
             float: right;
+            padding: 30px;
+            padding: 1.875rem;
+            box-sizing: border-box;
             width: 50%;
             height: 400px;
             height: 25rem;
-            transform: translateY(10%);
-            background-color: #fff; }
+            transform: translateY(10%); }
+            #portfol-area > .p-wrap-box > .p-right-box > .secound-area > .sec01 > .produc-area > p {
+              width: 100%;
+              height: 100%;
+              margin: auto;
+              font-size: 18px;
+              font-size: 1.125rem;
+              color: #333; }
         #portfol-area > .p-wrap-box > .p-right-box > .secound-area > .sec02 {
           width: 100%;
           height: auto;

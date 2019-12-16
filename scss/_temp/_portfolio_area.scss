@@ -24,7 +24,7 @@
           &>p{ @include conUnit(padding, 30); width:80%; @include conUnit(height, 100); margin:auto; @include conUnit(margin-bottom, 50); background-color:rgba(255,255,255,0.5); @include conUnit(font-size, 30); text-align:center; @include conUnit(line-height, 100); color:#333; }
           &>.sec01{ width:100%; height:auto; @include conUnit(margin-bottom, 100);
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
-            &>.img-area{ float:left; width:50%; @include conUnit(height, 400); background-image: url('../../img/portfolio/first/first-wire-frame.png'); background-size:cover; background-repeat:no-repeat; background-position:50% 50%;}
+            &>.img-area{ float:left; width:50%; @include conUnit(height, 400); background-image: url('../../img/portfolio/first/first-wire-frame.png'); background-size:cover; background-repeat:no-repeat; background-position:50% 50%; }
             &>.produc-area{ float:right; @include conUnit(padding, 30); box-sizing:border-box; width:50%; @include conUnit(height, 400); transform:translateY(10%); 
               &>p{ @include fullBox; @include conUnit(font-size, 18); color:#333; }
             }
@@ -49,7 +49,7 @@
           &>.sec03{ width:100%; @include conUnit(height, 500); background-color:rgba(255,255,255,0.5); overflow:hidden; overflow-y:auto;
             &>.scroll-area{ @include conUnit(padding, 30); box-sizing:border-box; width:100%; height:100% * $no; 
               &>.area01{ width:80%; height:50%; margin:auto; background-image: url('../../img/portfolio/first/airplan.jpg'); background-size:cover; background-repeat:no-repeat; background-position:50% 50%; 
-                &>span{ display:block; width:auto; height:100%; transform:translateY(50%); @include conUnit(font-size, 40); color:#fff; text-shadow:3px 3px 0 #333; text-align:right; }
+                &>span{ display:block; width:auto; height:100%; transform:translateY(50%); @include conUnit(font-size, 40); color:#fff; text-shadow:3px 3px 0 #333; text-align:center; }
               }
               &>.area02{ width:80%; height:50%; margin:auto; background-image: url('../../img/portfolio/first/airplan.jpg'); background-size:cover; background-repeat:no-repeat; background-position:50% 50%;
                 &>span{ display:block; width:auto; height:auto; z-index:50; transform:translateY(400%); @include conUnit(font-size, 40); color:#fff; text-shadow:3px 3px 0 #333; text-align:right; }
@@ -90,12 +90,14 @@
         } //first-area   
 
 
-        &>.secound-area{ display:none; position: absolute; top:0; left:0; @include conUnit(padding, 50); box-sizing:border-box; width:100%; height:auto; @include conUnit(min-height, 1000); background-color: #eee; 
-          &>p{ width:80%; @include conUnit(height, 100); margin:auto; @include conUnit(margin-bottom, 50); background-color:#fff; }
+        &>.secound-area{ display:none; position: absolute; top:0; left:0; @include conUnit(padding, 50); box-sizing:border-box; width:100%; height:auto; @include conUnit(min-height, 1000); background-color:#edd; 
+          &>p{ @include conUnit(padding, 30); width:80%; @include conUnit(height, 100); margin:auto; @include conUnit(margin-bottom, 50); background-color:rgba(255,255,255,0.5); @include conUnit(font-size, 30); text-align:center; @include conUnit(line-height, 100); color:#333; }
           &>.sec01{ width:100%; height:auto; @include conUnit(margin-bottom, 100);
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
-            &>.img-area{ float:left; width:50%; @include conUnit(height, 400); background-color: #fff; }
-            &>.produc-area{ float:right; width:50%; @include conUnit(height, 400); transform:translateY(10%); background-color: #fff; }
+            &>.img-area{ float:left; width:50%; @include conUnit(height, 400); background-image: url('../../img/portfolio/secound/secound-wire-frame.png'); background-size:cover; background-repeat:no-repeat; background-position:50% 50%; }
+            &>.produc-area{ float:right; @include conUnit(padding, 30); box-sizing:border-box; width:50%; @include conUnit(height, 400); transform:translateY(10%);
+              &>p{ @include fullBox; @include conUnit(font-size, 18); color:#333; }
+            }
           } //sec01
           &>.sec02{ width:100%; height:auto; @include conUnit(margin-bottom, 100); 
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
