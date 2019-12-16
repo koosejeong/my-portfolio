@@ -254,9 +254,9 @@
     const txtArea = secoundTxtArea.children('p');
 
     let txt02 = [ 
-    'Winter is the best way to relax, have a cup of hot coffee', 
-    'Let s blow cold with sweet and delicious dessert', 
-    'Seasonal Drinks', 'Kind of delicious and bakery' ];
+    '이런 식으로', 
+    '마우스를 갖다대면', 
+    '해당하는 이미지에 맞는', '문구로 바뀝니다!' ];
     
     for(let i=0; i<txtLi.length; i++){
       let imgBox = [ 'coffee02.jpg', 'dessert.jpg', 'drink.jpg', 'bakery.jpg' ];

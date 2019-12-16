@@ -1,7 +1,8 @@
 
   $c:5; $co:4; $n:3; $no:2;
   #portfol-area{ display:none; position:absolute; @include conUnit(top, 100); left:0; width:100%; @include conUnit(height, 1000); background-color:rgb(211, 194, 194); 
-    &>.p-wrap-box{ @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; 
+    &>.p-wrap-box{ position:relative; @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; 
+      &>p{ position:absolute; left:50%; @include conUnit(bottom, 50); transform:translateX(-50%); width:100%; height:auto; @include conUnit(font-size, 20); text-align:center;  }
       &>.p-left-box{ float:left; margin-right:3%; width:20%; height:100%; background-color:#d3c2c2; @include conUnit(border-radius, 10); 
         &>ul{ @include conUnit(padding, 10); box-sizing:border-box; @include fullBox; 
           &>li{ width:100%; @include conUnit(padding, 20); box-sizing:border-box; background-color: #fff; @include conUnit(border-radius, 20); @include conUnit(line-height, 30);
@@ -31,7 +32,7 @@
           } //sec01
           &>.sec02{ width:100%; height:auto; @include conUnit(margin-bottom, 100); 
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
-            &>.slide-area{ position:relative; width:60%; @include conUnit(height, 500); margin:auto; overflow:hidden;
+            &>.slide-area{ position:relative; width:100%; @include conUnit(height, 500); margin:auto; overflow:hidden;
               &>ul{ width:100% * $c; height:100%; transform:translateX(-100% / $c);
                 &>li{ float:left; width:100% / $c; height:100%; 
                   &>span{ display:block; width:auto; height:auto; @include conUnit(font-size, 100); text-align:center; @include conUnit(line-height, 500); color:#fff; }
@@ -101,7 +102,7 @@
           } //sec01
           &>.sec02{ width:100%; height:auto; @include conUnit(margin-bottom, 100); 
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
-            &>.slide-area{ position:relative; width:60%; @include conUnit(height, 500); margin:auto; background-color: #fff; overflow:hidden;
+            &>.slide-area{ position:relative; width:100%; @include conUnit(height, 500); margin:auto; background-color: #fff; overflow:hidden;
               &>ul{ width:100% * $co; height:100%; transform:translateX(-100% / $co);
                 &>li{ float:left; width:100% / $co; height:100%; 
                   &>span{ display:block; width:auto; height:auto; @include conUnit(font-size, 100); text-align:center; @include conUnit(line-height, 500); color:#fff; }
