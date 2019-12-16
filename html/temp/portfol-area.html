@@ -40,7 +40,15 @@
         <!-- 스케치/선정 이유 적을 영역 -->
         <div class="sec01"> 
           <div class="img-area"></div>
-          <div class="produc-area"></div>
+          <div class="produc-area">
+            <p>
+              처음으로 만들어 본 사이트는 파란 여행사라는 여행사 사이트입니다 :) <br />
+              반응형 웹사이트로 모바일, 타블렛, 랩탑, 피씨버전이 있습니다! <br />
+              전체적인 디자인 및 기능은 좌측의 바로가기 버튼을 클릭하면 가능하므로, 본 포트폴리오에서는 해당 사이트의 중요 기능만 재제작하여 설명 하는 방법을 취했습니다 :) <br />
+              <br />
+              감사합니다! <br />
+            </p>
+          </div>
         </div>
 
         <!-- 가로형 슬라이드 미니ver  -->
@@ -176,7 +184,7 @@
         <div class="complete-box">
           <div class="complete-img">
             <img src="./img/portfolio/labtop-ver.png" alt="완성 이미지">
-          </div> <!--  z-index:-1 -->
+          </div>
           <div class="macbook"></div> 
         </div>
       </div>
@@ -196,38 +204,145 @@
         <div class="sec02">
           <div class="slide-area">
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li><span>01</span></li>
+              <li><span>02</span></li>
+              <li><span>03</span></li>
             </ul>
+            <div class="btn-area">
+              <button type="button" class="next02">
+                <i class="fas fa-arrow-circle-right"></i>
+              </button>
+              <button type="button" class="prev02">
+                <i class="fas fa-arrow-circle-left"></i>
+              </button>
+            </div>
           </div>
           <!-- slide banner coding product area -->
-          <pre></pre>
+          <pre>
+            <br />
+            <br />
+            마찬가지로 카운팅이 될 임의의 변수를 가장 먼저 선언해 줍니다 <br />
+            해당 변수의 카운팅 값으로 슬라이드가 움직이는 것이 키포인트니까요 :) <br />
+            <br />
+            const 자동슬라이드 = function(){ <br />
+              $('.클래스').trigger('click'); <br />
+            }  <br />
+            //trigger 메서드를 활용하여 가로 방향으로 움직이는 자동 슬라이드 함수를 생성해 줍니다:) <br />
+            <br />
+            이미지영역.on('click', function(e){ <br />
+              e.preventDefault(); <br />
+              let 임의의변수 = $(this).index(); <br />
+              카운트변수 = 임의의변수; <br />
+              자동슬라이드(카운트변수); <br />
+              //순서값을 가지고 있는 임의의변수를 카운트변수에 대입해 줍니다. <br />
+              //위에서 만들어준 자동 슬라이드함수에 카운트변수를 매개변수로 전달하여 호출합니다. <br />
+            }); <br />
+            <br />
+            const 자동 = function(){ <br />
+              자동 = setInterval(function(){ <br />
+                자동슬라이드(); <br />
+              }, 2000); <br />
+              //setInterval메서드를 이용하여 위에서 만들어둔 자동 슬라이드가 <br />
+              //어느 정도의 시간을 갖고 움직일 것인지 정해 줍니다 :) <br />
+            }; <br />
+            const 멈춤 = function(){ <br />
+              clearInterval(자동); <br />
+              //사용자가 원할 때 자동으로 움직이는 슬라이드가 멈출 수 있어야 하므로 <br />
+              //clearInterval 메서를 활용하여 멈출 수 있게 만듭니다 :) <br />
+              //이때 clearInterval 메서드가 무엇을 정지 시킬 것인지 알아야 하므로 <br />
+              //반드시 매개변수로 위에서 만든 자동 함수를 전달해 줘야 합니다! <br />
+            };<br />
+            <br />
+            자동슬라이드();<br />
+            //자동슬라이드 최초 호출 <br />
+            <br />
+            슬라이드영역.on({'mouseenter':멈춤, 'mouseleaver':자동}); <br />
+            //슬라이드영역에 마우스가 가면 자동으로 움직이는 슬라이드가 멈추고, <br />
+            //반대로 마우스가 사라지면 다시 움직일 수 있도록 객체를 활용하여 함수를 호출합니다:) <br />
+            //trigger 메서드를 움직이는 로직은 첫 번째 포트폴리오에서 소개한 버튼을 클릭하여 <br />
+            //움직이는 슬라이드와 똑같은 로직이므로 생략하겠습니다 :) <br />
+            //감사합니다! <br />
+            <br />
+          </pre>
         </div>
 
         <!-- 스크롤 랜딩기법 미니 ver -->
         <div class="sec03">
           <div class="scroll-area">
-            <div class="area01"></div>
-            <div class="area02"></div>
+            <div class="area01">
+              <span>스크롤 랜딩기법</span>
+            </div>
+            <div class="area02">
+              <div class="coffee">
+                <div class="img01"></div>
+              </div>
+              <div class="brunch">
+                <div class="img02"></div>
+              </div>
+            </div>
           </div>
           <!-- slide banner coding product area -->
-          <pre></pre>
+          <pre>
+              <br />
+              $('.클래스').on('mousewheel DOMMouseScroll', function(e){ <br />
+                <br />
+                (e.originalEvent.wheelDelta) ?  <br />
+                n = e.originalEvent.wheelDelta * -1 : <br />
+                n = e.originalEvent.detail * 40; <br />
+                //크로스 브라우징을 위한 스크롤 이동값 조정 <br />
+                <br />
+                let 임의의변수 = 스크롤영역.offset().top; <br />
+                if( 임의의변수 > 높이값 ){ <br />
+                  $('.클래스01').addClass('스타일클래스'); <br />
+                  $('.클래스02').addClass('스타일클래스'); <br />
+                } <br />
+              }); <br />
+              //스타일시트에서 클래스명은 얼마든지 중복이 가능하단 점을 활용하여 <br />
+              //스크롤 랜딩 시 일어날 효과를 임의의 클래스 안에 기재합니다 :) <br />
+              //js에서 스크롤위치값을 가진 변수가 해당 영역의 height 값을 넘길 경우 <br />
+              //임의의 스타일 클래스를 주는 간단한 로직입니다 :) <br />
+              <br />
+          </pre>
         </div>
 
         <!-- 스크롤 랜딩기법 미니 ver -->
-        <div class="sec04">
-          <div class="scroll-area">
-            <div class="area01"></div>
-            <div class="area02"></div>
+        <div class="sec04-t">
+          <div class="text-change">
+            <ul>
+              <li><span>coffee</span></li>
+              <li><span>dessert</span></li>
+              <li><span>drink</span></li>
+              <li><span>bakery</span></li>
+            </ul>
+            <p></p>
           </div>
           <!-- slide banner coding product area -->
-          <pre></pre>
+          <pre>
+          <br />
+          목록.on('mouseenter', function(){ <br />
+            let 임의의변수 = $(this).index(); <br />
+            $(this).siblings().css({border:0, zIndex:0}); <br />
+            $(this).css({position:'relative', border:'5px solid #fff',  <br />
+            zIndex:10, boxSizing:'border-box'}); <br />
+            텍스트영역.text(배열변수[임의의변수]); <br />
+          }); <br />
+          //제이슨 파일을 이용하 거나, 간단한 문구의 경우 배열을 이용하여 선언해 줍니다 :) <br />
+          //빠르고 간편하게 처리하기 위해 사용할 이미지와 문구를 미리 짝을 맞춰 선언해 주면 좋습니다 <br />
+          //이벤트가 발생할 영역을 일부러 목록으로 만들었습니다. 순서값을 쉽게 가져오기 위해서요! <br />
+          //텍스트영역에 text() 메서드를 이용하여 미리 선언한 배열 변수를 순서값을 줘서 삽입합니다 <br /> 
+          //그러면 순서값에 따라 해당 이미지에 맞는 문구가 나타납니다! <br />
+            <br />
+            <br />
+          </pre>
         </div>
 
          <!-- 완성된 사이트 -->
-         <div class="complete-box"></div>
+         <div class="complete-box">
+            <div class="complete-img">
+              <img src="../../img/portfolio/tospia.png" alt="완성 이미지">
+            </div>
+            <div class="macbook"></div> 
+         </div>
 
       </div>
 

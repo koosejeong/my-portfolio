@@ -13,7 +13,6 @@
   // resume ----
   const myResume = myfull.children('#resume-area');
   const resumeBtn = myResume.find('.btn-area');
-  const visiBox = myResume.find('.visible-box');
   const hiddBox = myResume.find('.hidden-box');
 
   // portfolio ---
@@ -54,7 +53,8 @@
   });
 
   // portfolio 영역-----------------------
-
+  
+  // first-area-----------------------------
   const firstSlide = firstArea.find('.slide-area');
   const firstUl = firstSlide.children('ul');
   const firstLi = firstUl.children('li');
@@ -72,6 +72,8 @@
   const liTwo = ulTwo.children('li');
 
   const comBox = firstArea.find('.complete-box');
+
+
 
   let myN = 0;
   let len = firstLi.length;
@@ -164,6 +166,122 @@
    comBox.on('mouseleave', function(){
      $('img').stop().animate({top:'20px'}, 3000);
    });
+
+   // secound-area-----------------------------
+
+   const secoundSlide = seconArea.find('.slide-area');
+   const secoundUl = secoundSlide.children('ul');
+   const secoundLi = secoundUl.children('li');
+   const btnAreaT = secoundSlide.children('.btn-area');
+   const secoundBtn = btnAreaT.children('button');
+   const cobBox02 = seconArea.children('.complete-box');
+
+   let myNt = 0;
+   let lenT = secoundLi.length;
+    let urlT = `./img/portfolio/secound/`;
+    for(let i=0; i<lenT; i++){
+      let img = [ 'img01.jpg', 'img02.jpg', 'img03.jpg' ];
+      secoundLi.eq(i).css({ backgroundImage:`url(${urlT+img[i]})`,
+      backgroundSize:'cover', backgroundPosition:'50% 50%', 
+      backgroundRepeat:'no-repeat' })
+    }
+
+    // slide area -------------
+    secoundLi.eq(-1).clone(true).prependTo(secoundUl);
+    lenT++;
+
+    const moveSlide = function(){
+      $('.next02').trigger('click');
+    }
+    secoundLi.on('click', function(e){
+      e.preventDefault();
+      let va = $(this).index();
+      myNt = va;
+      moveSlide(myNt);
+    });
+    const goSlide = function(){
+      go = setInterval(function(){
+        moveSlide();
+      }, 2000);
+    };
+    const stopSlide = function(){
+      clearInterval(go);
+    };
+    goSlide();
+    secoundSlide.on({'mouseenter':stopSlide, 'mouseleaver':goSlide});
+
+    secoundBtn.on('click', function(e){
+      e.preventDefault();
+      let hasC02 = $(this).hasClass('next02');
+      if(hasC02){
+        myNt++;
+        if(myNt >= lenT-1){
+          myNt = 0;
+          secoundUl.css({marginLeft:'100%'});
+        }
+      } else {
+        myNt--;
+      } secoundUl.animate({marginLeft:-100 * myNt + '%'}, function(){
+        if(myNt < 0){
+          myNt = lenT-2;
+          secoundUl.css({marginLeft:-100 * myNt + '%'});
+        }
+      });
+    });
+     // scroll landing area -------------
+
+     const secoundSec03 = seconArea.children('.sec03');
+     const secoundScroll = seconArea.find('.scroll-area');
+
+     secoundSec03.on('mousewheel DOMMouseScroll', function(e){
+
+      (e.originalEvent.wheelDelta) ? 
+      n = e.originalEvent.wheelDelta * -1 : 
+      n = e.originalEvent.detail * 40;
+  
+      let scrollLoc = secoundScroll.offset().top;
+      if( scrollLoc > 200){
+        $('.img01').addClass('action');
+        $('.img02').addClass('action');
+      }
+    });
+
+     // text landing area -------------
+    const secoundSec04 = seconArea.children('.sec04-t');
+    const secoundTxtArea = secoundSec04.children('.text-change');
+    const txtUl = secoundTxtArea.children('ul');
+    const txtLi = txtUl.children('li');
+    const txtArea = secoundTxtArea.children('p');
+
+    let txt02 = [ 
+    'Winter is the best way to relax, have a cup of hot coffee', 
+    'Let s blow cold with sweet and delicious dessert', 
+    'Seasonal Drinks', 'Kind of delicious and bakery' ];
+    
+    for(let i=0; i<txtLi.length; i++){
+      let imgBox = [ 'coffee02.jpg', 'dessert.jpg', 'drink.jpg', 'bakery.jpg' ];
+      txtLi.eq(i).css({backgroundImage:`url(${urlT+imgBox[i]})`, backgroundSize:'cover',
+      backgroundPosition:'50% 50%', backgroundRepeat:'no-repeat'});
+    }
+    txtLi.on('mouseenter', function(){
+      let i = $(this).index();
+      $(this).siblings().css({border:0, zIndex:0});
+      $(this).css({position:'relative', border:'5px solid #fff', 
+      zIndex:10, boxSizing:'border-box'});
+      txtArea.text(txt02[i]);
+    });
+
+    cobBox02.on('mouseenter', function(){
+      $('img').stop().animate({top:'-850px'}, 3000);
+    });
+    cobBox02.on('mouseleave', function(){
+       $('img').stop().animate({top:'20px'}, 3000);
+     });
+  
+
+
+
+  //  left-box-------------------------------
 
   portBtn.on('click focus', function(e){
     e.preventDefault();

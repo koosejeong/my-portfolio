@@ -1,5 +1,5 @@
 
-  $c:5; $n:3; $no:2;
+  $c:5; $co:4; $n:3; $no:2;
   #portfol-area{ display:none; position:absolute; @include conUnit(top, 100); left:0; width:100%; @include conUnit(height, 1000); background-color:rgb(211, 194, 194); 
     &>.p-wrap-box{ @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; 
       &>.p-left-box{ float:left; margin-right:3%; width:20%; height:100%; background-color:#d3c2c2; @include conUnit(border-radius, 10); 
@@ -25,7 +25,9 @@
           &>.sec01{ width:100%; height:auto; @include conUnit(margin-bottom, 100);
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
             &>.img-area{ float:left; width:50%; @include conUnit(height, 400); background-image: url('../../img/portfolio/first/first-wire-frame.png'); background-size:cover; background-repeat:no-repeat; background-position:50% 50%;}
-            &>.produc-area{ float:right; width:50%; @include conUnit(height, 400); transform:translateY(10%); background-color:rgba(255,255,255,0.5); }
+            &>.produc-area{ float:right; @include conUnit(padding, 30); box-sizing:border-box; width:50%; @include conUnit(height, 400); transform:translateY(10%); 
+              &>p{ @include fullBox; @include conUnit(font-size, 18); color:#333; }
+            }
           } //sec01
           &>.sec02{ width:100%; height:auto; @include conUnit(margin-bottom, 100); 
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
@@ -33,7 +35,7 @@
               &>ul{ width:100% * $c; height:100%; transform:translateX(-100% / $c);
                 &>li{ float:left; width:100% / $c; height:100%; 
                   &>span{ display:block; width:auto; height:auto; @include conUnit(font-size, 100); text-align:center; @include conUnit(line-height, 500); color:#fff; }
-                }
+                } //li
               } //ul
               &>.btn-area{ position:absolute; top:50%; left:0; width:100%; height:auto; transform:translateY(-50%); 
                 &>button{ float:right; @include conUnit(width, 50); @include conUnit(height, 50); background-color:transparent;
@@ -42,7 +44,7 @@
                 }
               }
             } //slide-area
-            &>pre{ @include conUnit(padding, 50); width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
+            &>pre{ @include conUnit(padding, 20); width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
           } //sec02 
           &>.sec03{ width:100%; @include conUnit(height, 500); background-color:rgba(255,255,255,0.5); overflow:hidden; overflow-y:auto;
             &>.scroll-area{ @include conUnit(padding, 30); box-sizing:border-box; width:100%; height:100% * $no; 
@@ -67,7 +69,7 @@
               &>pre{ width:80%; @include conUnit(height, 300); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
             } //scroll-area
           } //sec03
-          &>.sec04{ @include conUnit(padding, 50); box-sizing:border-box; width:100%; height:auto; @include conUnit(margin-top, 150); background-color:rgba(255,255,255,0.5);
+          &>.sec04{ @include conUnit(padding, 30); box-sizing:border-box; width:100%; height:auto; @include conUnit(margin-top, 150); background-color:rgba(255,255,255,0.5);
             &>.img-change{ width:100%; @include conUnit(height, 700); 
               &>span{ display:block; width:100%; height:auto; transform:translateY(900%); @include conUnit(font-size, 30); color:#fff; text-align:center; } 
               &>ul{ width:100%; height:50%; 
@@ -79,8 +81,8 @@
           } //sec04
           &>pre{ width:100%; @include conUnit(height, 300); margin:auto; @include conUnit(margin-top, 100); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
           &>.complete-box{ position:relative; @include conUnit(padding, 50); box-sizing:border-box; width:100%; @include conUnit(height, 500); @include conUnit(margin-top, 150); background-color:rgba(255,255,255,0.5); 
-            &>.complete-img{ position:relative; width:550px; height:360px; margin:auto; background-color: #333; overflow:hidden; 
-              &>img{ position:absolute; left:0; top:20px; width:550px; height:auto; 
+            &>.complete-img{ position:relative; @include conUnit(width, 550); @include conUnit(height, 360); margin:auto; background-color: #333; overflow:hidden; 
+              &>img{ position:absolute; left:0; @include conUnit(top, 20); @include conUnit(width, 550); height:auto; 
               }
             }
             &>.macbook{ position:absolute; top:0; left:0; @include fullBox; background-image: url('../../img/portfolio/macbook.png'); background-size:contain; background-repeat:no-repeat; background-position:50% 50%; }
@@ -97,28 +99,59 @@
           } //sec01
           &>.sec02{ width:100%; height:auto; @include conUnit(margin-bottom, 100); 
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
-            &>.slide-area{ width:60%; @include conUnit(height, 500); margin:auto; background-color: #fff; overflow:hidden;
-              &>ul{ width:100% * $c; height:100%; transform:translateX(-100% / $c);
-                &>li{ float:left; width:100% / $c; height:100%; }
+            &>.slide-area{ position:relative; width:60%; @include conUnit(height, 500); margin:auto; background-color: #fff; overflow:hidden;
+              &>ul{ width:100% * $co; height:100%; transform:translateX(-100% / $co);
+                &>li{ float:left; width:100% / $co; height:100%; 
+                  &>span{ display:block; width:auto; height:auto; @include conUnit(font-size, 100); text-align:center; @include conUnit(line-height, 500); color:#fff; }
+                } //li
               } //ul
+              &>.btn-area{ position:absolute; top:50%; left:0; width:100%; height:auto; transform:translateY(-50%); 
+                &>button{ float:right; @include conUnit(width, 50); @include conUnit(height, 50); background-color:transparent;
+                &.prev02{ float:left; }
+                  &>i{ @include conUnit(font-size, 40); color:#fff; }
+                }
+              }
             } //slide-area
-            &>pre{ width:80%; @include conUnit(height, 300); margin:auto; @include conUnit(margin-top, 50); background-color:#fff; }
+            &>pre{ @include conUnit(padding, 20); width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
           } //sec02 
-          &>.sec03{ width:100%; @include conUnit(height, 500); background-color: #fff; overflow:hidden; overflow-y:auto;
-            &>.scroll-area{ @include conUnit(padding, 30); box-sizing:border-box; width:100%; height:100% * $no; 
-              &>.area01{ width:80%; height:100% / $no; margin:auto; background-color:#eee; }
-              &>.area02{ width:80%; height:100% / $no; margin:auto; background-color:#ddd; }
+          &>.sec03{ width:100%; @include conUnit(height, 500); background-color:rgba(255,255,255,0.5); overflow:hidden; overflow-y:auto;
+            &>.scroll-area{ @include conUnit(padding, 50); box-sizing:border-box; width:100%; @include conUnit(height, 800);
+              &>.area01{ width:80%; height:50%; margin:auto; background-image: url('../../img/portfolio/secound/floor.jpg'); background-size:cover; background-position:50% 50%; background-repeat: no-repeat; 
+                &>span{ display:block; width:auto; height:auto; @include conUnit(font-size, 30); text-align:center; @include conUnit(line-height, 400); color:#fff; }
+              }
+              &>.area02{ width:80%; height:50%; margin:auto; background-image: url('../../img/portfolio/secound/floor.jpg'); background-size:cover; background-position:50% 50%; background-repeat: no-repeat; 
+                &>.coffee{ position:relative; width:100%; height:50%; 
+                  &>.img01{ position:absolute; top:0; left:-100%; width:50%; height:100%; background-image: url('../../img/portfolio/secound/coffee.jpg'); background-size:cover; background-position:50% 50%; background-repeat: no-repeat;  
+                  &.action{ left:0; transition:all 300ms ease;  } 
+                  } //img01
+                } //coffee
+                &>.brunch{ position:relative; width:100%; height:50%; 
+                  &>.img02{ position:absolute; top:0; right:-100%; width:50%; height:100%; background-image: url('../../img/portfolio/secound/brunch.jpg'); background-size:cover; background-position:50% 50%; background-repeat: no-repeat;  
+                  &.action{ right:0; transition:all 300ms ease;  } 
+                  } //img02
+                } //brunch
+              } //area02
             } //scroll-area
-            &>pre{ width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#edd; }
+            &>pre{ @include conUnit(padding, 20); width:80%; @include conUnit(height, 200); margin:auto; background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
           } //sec03
-          &>.sec04{ @include conUnit(padding, 50); box-sizing:border-box; width:100%; @include conUnit(height, 500); @include conUnit(margin-top, 50); background-color: #fff; overflow:hidden; overflow-y:auto;
-            &>.scroll-area{ @include conUnit(padding, 30); box-sizing:border-box; width:100%; height:100% * $no; 
-              &>.area01{ width:80%; height:100% / $no; margin:auto; background-color:#eee; }
-              &>.area02{ width:80%; height:100% / $no; margin:auto; background-color:#ddd; }
-            } //scroll-area
-            &>pre{ width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#edd; }
+          &>.sec04-t{ @include conUnit(padding, 30); box-sizing:border-box; width:100%; height:auto; @include conUnit(min-height, 500); @include conUnit(margin-top, 150); background-color:rgba(255,255,255,0.5); overflow:hidden; overflow-y:auto;
+            &>.text-change{ width:100%; @include conUnit(height, 500); background-color:#edd; 
+              &>ul{ @include conUnit(padding, 30); box-sizing:border-box; width:80%; height:50%; margin:auto; 
+                &>li{ float:left; width:25%; height:100%; border-radius:100%; background-color: #fff; 
+                  &>span{ display:block; @include fullBox; text-align:center; transform:translateY(45%); @include conUnit(font-size, 16); color:#fff; }
+                }
+              } //ul
+              &>p{ width:100%; @include conUnit(height, 100); @include conUnit(line-height, 100); background-color:rgba(255,255,255,0.5); text-align:center; @include conUnit(font-size, 20); }
+            } //text-change
+            &>pre{ @include conUnit(padding, 20); width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
           } //sec04
-          &>.complete-box{ width:100%; @include conUnit(height, 500); @include conUnit(margin-top, 50); background-color:#fff; }
+          &>.complete-box{ position:relative; @include conUnit(padding, 50); box-sizing:border-box; width:100%; @include conUnit(height, 500); @include conUnit(margin-top, 150); background-color:rgba(255,255,255,0.5);  
+            &>.complete-img{ position:relative; @include conUnit(width, 550); @include conUnit(height, 360); margin:auto; background-color: #333; overflow:hidden; 
+              &>img{ position:absolute; left:0; @include conUnit(top, 20); @include conUnit(width, 550); height:auto; 
+              }
+            }
+            &>.macbook{ position:absolute; top:0; left:0; @include fullBox; background-image: url('../../img/portfolio/macbook.png'); background-size:contain; background-repeat:no-repeat; background-position:50% 50%; }
+          }
       } //secound-area
         
         
