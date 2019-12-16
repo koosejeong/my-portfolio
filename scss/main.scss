@@ -1,0 +1,16 @@
+// main.scss
+
+@import "_basic/var";
+@import "_basic/mixin_02";
+@import "_basic/etc";
+
+#wrap{ position:relative; width:auto; height:auto; font-family: 'Black Han Sans'; text-transform: capitalize; }
+
+@import "_temp/head";
+@import "_temp/full";
+@import "_temp/main_area";
+@import "_temp/resume_area";
+@import "_temp/portfolio_area";
+@import "_temp/study_area";
+
+

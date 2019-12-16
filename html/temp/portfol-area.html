@@ -1,0 +1,290 @@
+<!-- portfol-area.html  -->
+<div class="p-wrap-box">
+    <div class="p-left-box">
+      <ul>
+        <li>
+          <a href="https://koosejeong.github.io/first_website/">
+            <span>파란 여행사 바로가기</span>
+          </a>
+          <button type="button">제작과정 바로보기</button>
+        </li> 
+        <li>
+          <a href="https://koosejeong.github.io/secound_website/">
+            <span>카페 토스피아 바로가기</span>
+          </a>
+          <button type="button">제작과정 바로보기</button>
+        </li>
+        <li>
+          <a href="https://koosejeong.github.io/third_website/">
+            <span>창작 웹사이트 바로가기</span>
+          </a>
+          <button type="button">제작과정 바로보기</button>
+        </li>
+        <li>
+          <a href="#">
+            <span>someday add...</span>
+          </a>
+          <button type="button">준비 중입니다:)</button>
+        </li>  
+      </ul>
+    </div>
+
+    <!-- ---------------------------------------------------------- -->
+    <div class="p-right-box">
+      <div class="intro-area"></div>
+      <div class="first-area">
+
+        <p>
+          첫 번째 웹 사이트 파란 여행사 제작 과정
+        </p>
+        <!-- 스케치/선정 이유 적을 영역 -->
+        <div class="sec01"> 
+          <div class="img-area"></div>
+          <div class="produc-area"></div>
+        </div>
+
+        <!-- 가로형 슬라이드 미니ver  -->
+        <div class="sec02">
+          <div class="slide-area">
+            <ul>
+              <li><span>01</span></li>
+              <li><span>02</span></li>
+              <li><span>03</span></li>
+              <li><span>04</span></li>
+            </ul>
+            <div class="btn-area">
+              <button type="button" class="next">
+                <i class="fas fa-arrow-circle-right"></i>
+              </button>
+              <button type="button" class="prev">
+                <i class="fas fa-arrow-circle-left"></i>
+              </button>
+            </div>
+          </div>
+          <!-- slide banner coding product area -->
+            <pre>
+              미리미리 필요한 변수들을 선언해 줍니다 :) <br />
+              가장 중요한 변수는 버튼의 클릭값을 담아둘 변수입니다. <br />
+              <br />
+              <br />
+              버튼on('click', function(e){ <br />
+                e.이벤트 초기화 <br />
+                if(다음 버튼){ <br />
+                  임의의 변수++; <br />
+                  if( 임의의변수 >= 이미지-1){ <br />
+                    임의의변수 = 0; <br />
+                    이미지를 감싸고 있는 속성.css({left:100%}); <br />
+                  } <br />
+                } else {  <br />
+                  임의의변수--; <br />
+                } 이미지를 감싸고 있는 속성.animate({ left:-100 * 임의의변수 + '%'}, function(){ <br />
+                  if(임의의변수 < 0){ <br />
+                    임의의변수 = 이미지수-2; <br />
+                    이미지를 감싸고 있는 속성.css({left:-100 * 임의의변수 + '%'}); <br />
+                  } <br />
+                }); <br />
+              }); <br />
+              <br />
+              위와 같은 로직으로 가로로 움직이는 슬라이드 배너를 만들어 주면 됩니다 :) <br />
+            </pre>
+      
+        </div>
+        
+
+        <!-- 스크롤 랜딩기법 미니 ver -->
+        <div class="sec03">
+          <div class="scroll-area">
+            <div class="area01 scroll">
+              <span>황홀한 휴양지로 떠나는 여행</span>
+            </div>
+            <div class="area02 scroll">
+              <span>황홀한 휴양지로 떠나는 여행</span>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <!-- slide banner coding product area -->
+            <pre>
+              <br />
+                $('.클래스').on('mousewheel DOMMouseScroll', function(e){ <br />
+                  <br />
+                  (e.originalEvent.wheelDelta) ?  <br />
+                  n = e.originalEvent.wheelDelta * -1 :  <br />
+                  n = e.originalEvent.detail * 40; <br />
+                  //크로스 브라우징을 위한 스크롤 이동값 조정 <br />
+                  <br />
+                  let 임의의변수 = 스크롤영역.offset().top; <br />
+                  if( 임의의변수 > 높이값){ <br />
+                    $('.클래스').addClass('.스타일클래스'); <br />
+                  } <br />
+                  <br />
+                }); <br />
+                <br />
+                이미지영역.on('mouseenter', function(){ <br />
+                  let 임의의변수 = 이미지영역.index(); <br />
+                  이미지영역.eq(임의의변수).parents('.배경영역').css({  <br />
+                  backgroundImage:`url(${경로+이미지파일명.확장자})`}); <br />
+                }); <br />
+                <br />
+                일정 영역에 스크롤이 도달하면 효과를 주는 스크롤 랜딩 기법 <br />
+                mousewheel 메서드를 활용하여 효과를 줄 영역의 높이값을 <br />
+                계산하여 위와 같이 짜주면 간단하게 활용 가능합니다 :) <br />
+                <br />
+            </pre>
+          </div>
+      
+        </div>
+
+        <!--  -->
+
+        <div class="sec04">
+          <div class="img-change">
+            <span></span>
+            <ul class="ul-one clearfix">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <ul class="ul-two clearfix">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <pre>
+          <br />
+            이미지영역.on('mouseenter', function(){ <br />
+              let 변수 = 이미지영역.index();  <br />
+              이미지영역.css({ border:'3px solid #d68e0f'});  <br />
+              이미지영역.siblings().css({border:0});  <br />
+              텍스트영역.children('span').text(텍스트[변수]);  <br />
+              배경이미지영역.css({ backgroundImage:`url(${경로+파일명[변수]})`,  <br />
+              backgroundSize:'cover', backgroundPosition:'50% 50%',  <br />
+              backgroundRepeat:'no-repeat' })  <br />
+            });  <br />
+            <br />
+            이미지를 가지고 있는 영역에 마우스를 갖다대면 해당 이미지와  <br />
+            동일한 이미지로 뒷배경이랑 광고 문구가 바뀌는 로직입니다 :)  <br />
+            위와 같이 순서값만 잘 가지고 있으면 어려울 것 없는 방법입니다!  <br />
+            <br />
+        </pre>
+
+        <!-- 완성된 사이트 -->
+        <div class="complete-box">
+          <div class="complete-img">
+            <img src="../../img/portfolio/labtop-ver.png" alt="완성 이미지">
+          </div> <!--  z-index:-1 -->
+          <div class="macbook"></div> 
+        </div>
+      </div>
+
+      <!-- -------------------------------- -->
+
+      <div class="secound-area">
+
+        <p>두 번째 웹 사이트 제작 과정</p>
+         <!-- 스케치/선정 이유 적을 영역 -->
+        <div class="sec01"> 
+          <div class="img-area"></div>
+          <div class="produc-area"></div>
+        </div>
+
+        <!-- 가로형 슬라이드 미니ver  -->
+        <div class="sec02">
+          <div class="slide-area">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <!-- slide banner coding product area -->
+          <pre></pre>
+        </div>
+
+        <!-- 스크롤 랜딩기법 미니 ver -->
+        <div class="sec03">
+          <div class="scroll-area">
+            <div class="area01"></div>
+            <div class="area02"></div>
+          </div>
+          <!-- slide banner coding product area -->
+          <pre></pre>
+        </div>
+
+        <!-- 스크롤 랜딩기법 미니 ver -->
+        <div class="sec04">
+          <div class="scroll-area">
+            <div class="area01"></div>
+            <div class="area02"></div>
+          </div>
+          <!-- slide banner coding product area -->
+          <pre></pre>
+        </div>
+
+         <!-- 완성된 사이트 -->
+         <div class="complete-box"></div>
+
+      </div>
+
+      <!-- -------------------------------- -->
+      <div class="third-area">
+        <p>세 번째 웹 사이트 제작 과정</p>
+         <!-- 스케치/선정 이유 적을 영역 -->
+         <div class="sec01"> 
+          <div class="img-area"></div>
+          <div class="produc-area"></div>
+        </div>
+
+        <!-- 가로형 슬라이드 미니ver  -->
+        <div class="sec02">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <!-- slide banner coding product area -->
+            <pre></pre>
+        </div>
+
+        <!-- 탭기능 ver -->
+        <div class="sec03">
+          <ul class="clearfix">
+            <li class="area01"></li>
+            <li class="area02"></li>
+            <li class="area03"></li>
+            <li class="area04"></li>
+          </ul>
+          <div class="content-area"></div>
+          <div class="txt-area"></div>
+          <!-- slide banner coding product area -->
+          <pre></pre>
+        </div>
+
+        <!-- add action class ver -->
+        <div class="sec04">
+          <ul class="clearfix">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class="line clearfix">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <!-- slide banner coding product area -->
+          <pre></pre>
+        </div>
+
+        <!-- 완성된 사이트 -->
+        <div class="complete-box"></div>
+
+      </div>
+    
+  </div>

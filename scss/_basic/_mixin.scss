@@ -1,0 +1,95 @@
+// mixin.scss
+
+@mixin fullbox() {
+  width:100%; height:100%;
+}
+
+//요소 내부에 있는 텍스트 숨기는 기능
+
+//숨기는 영역 처리하기
+@mixin hidden() {
+  display:block; position:absolute; z-index:-10; width:0; height:0; overflow:hidden;
+}
+@mixin hiddenText() {
+  display:block; position:absolute; z-index:-1; width:0; height:0; overflow:hidden;
+} 
+
+// <a> 요소에 사이즈 설정 및 내부 텍스트 숨기는 기능
+@mixin myLink ( $w:100%, $h:100%){
+ display:block; width:$w; height:$h; 
+ @content;
+ &>span{ @include hiddenText; }
+} // myLink
+ // $w나 $h에 명확한 수치를 주고 싶을 시, @include myLink($h:300px);  식으로 매개변수에 수치 입력
+ 
+
+
+@mixin indicator_type_01 ( $select, $myw, $zIn:500 ){
+  //하단에 위치한 인디케이터. focus 시 해당 버튼이 가로로 길게 늘어나는 형태
+  //option-1: 인디케이터 내 버튼당 크기는 $w로 설정함.
+  //option-2: class 선택자 이름 $select => 선택자 지칭
+  //기본 구조: $select > ul > li > a 순서를 가지고 있다. 
+  //*interpolation(보간) === #{ $파라미터 }
+
+//frame work =======================================
+
+
+  #{$select} { $w:$myw; $f:100%; 
+    position:absolute; z-index:$zIn; left:50%; bottom:$w; transform:translateX(-50%); width:auto; min-width:135px; height:$w; background-color:$white; padding:5px; border-radius:$w; 
+    &>ul{ width:$f; height:$f; 
+      &>li{ float:left; width:auto; height:$w; margin-left:5px;  
+        &:first-child{ margin-left:0; }
+      } //li
+      & a{ @include myLink($w:$w, $h:$f); border-radius:$w; background-color: $gray; transition:all 300ms ease;
+        &:hover{ background-color: lighten($primary, 30%);}
+        &.action{ background-color: $primary; width:($w*3);}
+      &>span{ @include hiddenText; }
+      } //a
+    } // ul
+  } //view_indicator
+} //indicator_type_01==========================================
+
+
+// slide banner frame work=====================================
+@mixin horizontal_slide_banner ( $bannerName, $c, $w:100%, $h:100%, $view:false ) {
+  // $bannerName : (필수)하나의 광고 슬라이더 배너를 보여주는 영역의 클래스명
+  // .guide : (필수)$bannerName의 자식인 가로 슬라이드 전부를 담을 박스 이름
+  // (필수) .guide의 자식 요소는 div
+  // $c : (필수)가로형 슬라이드 배너의 기본 갯수
+  // $w, $h : 클래스의 기본 너비와 높이값
+  // $view : true- overflow:visible, false- overflow:hidden
+  #{ $bannerName }{ $count:$c;
+    width:$w; height:$h; 
+      @if $view == true {
+        overflow:visible;
+      } @else {
+        overflow:hidden; 
+      }
+    .guide { position:relative; top:0; left:0; width:(100%*$count); height:100%; background-color:$sample; 
+       &>div{ float:left; padding:4rem; box-sizing:border-box; width:(100%/$count); height:100%; background-repeat: no-repeat; background-position:50% 50%; background-size: cover;
+        
+        @content;
+      } //div(개별 요소
+  
+    } // .guide
+  } // $bannerName
+} //mixin horizontal_slide_banner
+
+
+// 반복문으로 이미지 넣는 Frame work =================================
+// $count
+$url: '이미지 경로'; //@mixin 사용 전 경로값 설정할 것.
+@mixin horizon_banner_img ( $count, $imgName, $url:$url,  $file:'jpg' ){
+  @for $i from 1 through $count {
+    $n: null;
+      @if $i < 10 {
+          $n: '0'+$i; //01, 02 ...09
+        } @else {
+          $n:$i;
+      }//if
+      &:nth-of-type(#{$i}){ background-image:url($url + $imgName + $n + '.' + $file);
+      
+    } 
+  } //for
+}
+

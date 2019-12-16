@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="웹 페이지 실습에 따른 목차 구성" >
+<meta name="keyword" content="html, css, js, web, design" >
+<meta name="author" content="구세정" >
+<meta name="generator" content="illustrator, photoshop, vscode" >
+<!--[if let IE]>
+  <script src="./IE/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="./IE/PIE/PIE.js"></script>
+  <sctipy src="./IE/respond/Respond-1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+ <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="./fonts/fontawesome/css/all.css">
+ <link rel="stylesheet" href="./css/base/reset.css">
+ <link rel="stylesheet" href="./css/base/common.css">
+ <link rel="stylesheet" href="./css/src/main.css">
+<title>Document</title>
+</head>
+<body>
+<noscript>
+<p>현재 접속하고 있는 사이트 기능의 일부가 원활하게 실행 되고 있지 않습니다.<br /> 자바스크립트의 기능을 활성화 하세요.</p>
+<p><a target="_blank" href="http://enable-javascript.com/ko">자바스크립트 활성화하기</a></p>
+</noscript>
+<div id="wrap">
+  
+</div>
+  <script src="./js/base/jquery-3.4.1.min.js"></script>
+  <script src="./js/base/jquery-ui.min.js"></script>
+  <script>
+    (function($){
+      $('#wrap').load("./html/main.html", function(){
+      });
+      //window.location = "./html/main.html";
+    })(jQuery);
+  </script>
+
+</body>
+</html>

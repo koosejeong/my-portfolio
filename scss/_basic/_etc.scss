@@ -1,0 +1,12 @@
+// etc.scss
+
+ //px to rem
+//  @function pxrem ( $w, $r ){
+  
+//    @return #{$w}:($r/16);
+//  } 
+
+ @mixin px($w, $r) {
+   #{$w}:$r+px;
+   #{$w}:$r+px;
+ }

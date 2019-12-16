@@ -1,0 +1,80 @@
+// mixin_02
+
+$url:'../img/';
+
+@mixin fullBox( $w:100%, $h:100%) {
+  width:$w; height:$h; margin:auto; 
+} // @mixin fullBox
+
+// ------------------------------------
+// unit px, rem 처리
+
+$rootUnit: 16;
+@function unit($u ) {
+  @return $u / $rootUnit;
+} //@function
+
+@mixin conUnit($pro, $u) {
+  #{$pro}:$u + px;
+  #{$pro}:unit($u) + rem;
+}
+
+
+@mixin hidden() {
+  display:block; position:absolute; z-index:-10; width:0; height:0; overflow:hidden;
+}
+
+@mixin image($v , $i:none, $w:100%, $h:100%, $r:no-repeat, $p:0 0, $s:contain){
+  @if($v = block){
+    display:block; 
+  }@else if ($v == none){
+    display:none; 
+  }@else if ($v == inline-block){
+    display:inline-block; 
+  }
+  width:$w; height:$h; 
+  @if($i != none){
+    background-image:url($url + $i);
+  }
+  background-repeat:$r;
+  background-position:$p;
+  background-size:$s;
+  @content;
+  
+}
+
+// ----------------------------------------
+@function img($i){
+  @return url($url + $i);
+}
+/*
+@mixin perantWidth($pw:){
+  width:$pw;
+}
+*/
+// responsive mixin------------------------
+$mobile : 480px;
+$tablet : 768px;
+$pc     : 1280px;
+$pcfull : 1920px;
+
+@mixin mobile(){
+  @media screen and ( max-width:$mobile) {
+    @content;
+  }
+}
+@mixin tablet(){
+  @media screen and ( max-width:$tablet) {
+    @content;
+  }
+}
+@mixin pc(){
+  @media screen and ( max-width:$pc) {
+    @content;
+  }
+}
+@mixin pcfull(){
+  @media screen and ( max-width:$pcfull) {
+    @content;
+  }
+}
