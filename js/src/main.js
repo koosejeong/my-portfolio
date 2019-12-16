@@ -51,7 +51,6 @@
     } else if(hiLeft ) {
       hiddBox.removeAttr('style');
     }
-    //재클릭 시 원위치 어떻게??
   });
 
   // portfolio 영역-----------------------
@@ -117,7 +116,6 @@
     if( scrollLoc > 100){
       $('.area02').addClass('action');
     }
-    // 왜 안 되는 거여~~~~~ 
   });
 
   let imgBox = [ 'valy02.jpg', 'kota02.jpg', 'manyla02.jpg' ];
