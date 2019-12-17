@@ -1,6 +1,6 @@
 <!-- portfol-area.html  -->
 <div class="p-wrap-box">
-    <p>모든 사이트는 상업적 목적 없이 포트폴리오 제작용으로만 제작 되었습니다.</p>
+    <p>모든 사이트에 이용된 이미지는 상업적 목적 없이 포트폴리오 제작용으로만 사용 되었습니다.</p>
     <div class="p-left-box">
       <ul>
         <li>
@@ -331,6 +331,7 @@
               <li><span>bakery</span></li>
             </ul>
             <p></p>
+            <span>이미지에 마우스를 갖다대 보세요!</span>
           </div>
           <!-- slide banner coding product area -->
           <pre>
@@ -368,53 +369,132 @@
          <!-- 스케치/선정 이유 적을 영역 -->
          <div class="sec01"> 
           <div class="img-area"></div>
-          <div class="produc-area"></div>
+          <div class="produc-area">
+            <p>
+              <br />
+              세 번째로 만든 사이트는 기존 존재하는 사이트를 참고한 것이 아닌 창작 웹사이트입니다 :) <br />
+              기존의 사이트를 참고, 변형하는 것도 해보았고 앞으로 스터디를 하며 기존의 잘만든 사이트를 그대로 만드는 것도 할 예정이라 한 번쯤은 처음부터 끝까지 디자인과 기능만 넣은 사이트를 만드는 것도 좋은 경험이라생각해 만들어 보게 됐습니다! <br />
+              그러다보니 부족한 점도 많고 아쉬운 점도 많지만 그래도 즐겁게 작업할 수 있어 흡족했던 사이트입니다! <br />
+              <br />
+            </p>
+          </div>
         </div>
 
         <!-- 가로형 슬라이드 미니ver  -->
         <div class="sec02">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+            <ul class="third-ul">
+              <li><span>01</span></li>
+              <li><span>02</span></li>
+              <li><span>03</span></li>
+              <li><span>04</span></li>
             </ul>
             <!-- slide banner coding product area -->
-            <pre></pre>
+            <pre>
+              <br />
+              //카운팅이 될 임의의 변수를 선언합니다 :)
+                setInterval(function(){ <br />
+                  임의의변수++; <br />
+                   if(임의의변수 > 이미지갯수-1){ <br />
+                    임의의변수 = 0; <br />
+                   } <br />
+                      이미지영역.eq(임의의변수).css({zIndex:10}); <br />
+                      이미지영역.eq(임의의변수).fadeIn(function(){ <br />
+                      이미지영역.eq(임의의변수).siblings().hide(0); <br />
+                      이미지영역.css({zIndex:0}); <br />
+                    }); <br />
+                 },5000); <br />
+                 <br />
+                 //비교적 간단한 슬라이드 배너입니다 :) <br />
+                 //setInterval()메서드를 활용하여 이미지를 담고 있는 영역의 <br />
+                 //z-index 값을 조정하여 나타났다, 사라지게 만드는 슬라이드 배너입니다!<br />
+                 //카운팅이 될 변수가 준비된 이미지 갯수를 넘지 않게 조건문으로 <br />
+                 //초기화 시키는 게 관건입니다 :) <br />
+                 <br />
+            </pre>
         </div>
 
         <!-- 탭기능 ver -->
         <div class="sec03">
-          <ul class="clearfix">
-            <li class="area01"></li>
-            <li class="area02"></li>
-            <li class="area03"></li>
-            <li class="area04"></li>
+          <ul class="third-ul-02 clearfix">
+            <li class="area01"><span>01</span></li>
+            <li class="area02"><span>02</span></li>
+            <li class="area03"><span>03</span></li>
+            <li class="area04"><span>04</span></li>
           </ul>
-          <div class="content-area"></div>
-          <div class="txt-area"></div>
+          <div class="conBox">
+            <div class="content-area">
+              <div class="third-img-area"></div>
+            </div>
+            <div class="txt-area">
+              <div class="third-txt-area">
+                <span>맨 처음 보이는 이미지 및 문구 입니다</span>
+              </div>
+            </div>
+          </div>
           <!-- slide banner coding product area -->
-          <pre></pre>
+          <pre><br />
+              목록.on('click', function(){ <br />
+                let 순서값변수 = $(this).index(); <br />
+                이미지영역.css({backgroundImage:`url(${경로변수+이미지변수[순서값변수]})`}); <br />
+                텍스트영역.text(텍스트변수[순서값변수]); <br />
+               }); <br />
+               <br />
+               //위에서 언급한 변수는 미리 json 파일이나 배열형 변수를 이용하여 선언해 줍니다:) <br />
+               //목록의 순서값만 받아오면 끝나는 간단한 효과입니다! <br />
+               //클릭한 탭에 따라 보여질 영역에 생각한 이미지와 문구를 순서값에 맞춰 삽입하면 끝입니다 <br />
+               //참 쉽죠? <br />
+               <br />
+          </pre>
         </div>
 
         <!-- add action class ver -->
-        <div class="sec04">
+        <div class="sec04-third">
           <ul class="clearfix">
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="img-li"><p>클릭하기 위해</p></li>
+            <li class="img-li"><p>마우스를 갖다대면</p></li>
+            <li class="img-li"><p>문구가 스르륵!</p></li>
           </ul>
-          <ul class="line clearfix">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <div class="line">
+            <ul class="clearfix">
+              <li class="line-li"><span>1</span></li>
+              <li class="line-li"><span>2</span></li>
+              <li class="line-li"><span>3</span></li>
+            </ul>
+          </div>
           <!-- slide banner coding product area -->
-          <pre></pre>
+          <pre><br />
+            <br />
+              목록.on('mouseenter', function(){ <br />
+                let 순서값변수 = $(this).index(); <br />
+                텍스틍영역.eq(순서값변수).show(); <br />
+                if( 순서값변수==0 ){ <br />
+                 목록2.eq(0).addClass('스타일클래스'); <br />
+                 lineLi.eq(0).siblings().removeClass('스타일클래스');
+                } else if( 순서값변수==1 ){ <br />
+                 목록2.eq(1).addClass('스타일클래스'); <br />
+                 목록2.eq(1).siblings().removeClass('스타일클래스'); <br />
+                } else { <br />
+                 목록2.eq(2).addClass('스타일클래스'); <br />
+                 목록2.eq(2).siblings().removeClass('스타일클래스'); <br />
+                } <br />
+              }); <br />
+              <br />
+              //목록 태그를 활용한 간단한 로직입니다 :) <br />
+              //목록의 순서값을 활용하여 display:none 시켜뒀던 속성 태그를 <br />
+              //show() 메서드를 이용하여 나타나게 만들고, 아래의 게이지 스타일은, <br />
+              //다른 목록을 하나 더 만들어 조건문을 통해 순서를 일치 시킨 뒤 scss에서 <br />
+              //만들어둔 스타일클래스를 부여하면 끝납니다! <br />
+              <br />
+          </pre>
         </div>
 
         <!-- 완성된 사이트 -->
-        <div class="complete-box"></div>
+        <div class="complete-box">
+          <div class="complete-img">
+            <img src="../../img/portfolio/create.png" alt="완성 이미지">
+            </div>
+          <div class="macbook"></div> 
+        </div>
 
       </div>
     

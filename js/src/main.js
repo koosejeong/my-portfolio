@@ -279,6 +279,84 @@
      });
   
 
+  // third-area-----------------------------
+
+     const thirdUl = thirdArea.find('.third-ul');
+     const thirdLi = thirdUl.children('li');
+     const thirdSec03 = thirdArea.children('.sec03');
+     const thirdUl02 = thirdSec03.children('.third-ul-02');
+     const thirdLi02 = thirdUl02.children('li');
+     const thirdCon = thirdSec03.children('.conBox');
+     const thirdConArea = thirdCon.children('.content-area');
+     const thirdImg = thirdConArea.children('.third-img-area');
+     const thirdTxtArea = thirdCon.children('.txt-area');
+     const thirdSpan = thirdTxtArea.find('span');
+     const thirdSec04 = thirdArea.children('.sec04-third');
+     const thirdLi03 = thirdSec04.find('.img-li');
+     const thirdL03P = thirdLi03.children('p');
+     const divLine = thirdSec04.children('.line');
+     const lineLi = divLine.find('.line-li');
+     const cobBox03 = thirdArea.children('.complete-box')
+
+     let thirdLen = thirdLi.length;
+     let thirdN = 0;
+     let thirdUrl = `./img/portfolio/third/`;
+     let imgThird = [ 'perfume00.jpg', 'perfume01.jpg', 
+     'perfume02.jpg', 'perfume03.jpg' ];
+
+     let thirdTabImg = [ 'season01.jpg', 'season02.jpg' ,
+     'season03.jpg', 'season04.jpg' ];
+
+     let thirdTabTxt = [ '내가 클릭한', '탭에 맞는',
+     '문구와 이미지가', '나타납니다' ];
+     
+     for(let i=0; i<thirdLen; i++){
+       let j=thirdUrl+imgThird[i];
+       //console.log(j)
+      thirdLi.eq(i).css({ backgroundImage:'url('+j+')' ,
+      backgroundSize:'cover', backgroundPosition:'50% 50%', backgroundRepeat:'no-repeat' });
+     }
+
+     setInterval(function(){
+      thirdN++;
+       if(thirdN > thirdLen-1){
+        thirdN = 0;
+       }
+        thirdLi.eq(thirdN).css({zIndex:10});
+        thirdLi.eq(thirdN).fadeIn(function(){
+        thirdLi.eq(thirdN).siblings().hide(0);
+        thirdLi.css({zIndex:0});
+        });
+     },5000);
+
+     thirdLi02.on('click', function(){
+      let i = $(this).index();
+      thirdImg.css({backgroundImage:`url(${thirdUrl+thirdTabImg[i]})`});
+      thirdSpan.text(thirdTabTxt[i]);
+     });
+
+     thirdLi03.on('mouseenter', function(){
+       let i = $(this).index();
+       thirdL03P.eq(i).show();
+       if( i==0 ){
+        lineLi.eq(0).addClass('action');
+        lineLi.eq(0).siblings().removeClass('action');
+       } else if( i==1 ){
+        lineLi.eq(1).addClass('action');
+        lineLi.eq(1).siblings().removeClass('action');
+       } else {
+        lineLi.eq(2).addClass('action');
+        lineLi.eq(2).siblings().removeClass('action');
+       }
+     });
+
+    cobBox03.on('mouseenter', function(){
+      $('img').stop().animate({top:'-930px'}, 3000);
+    });
+    cobBox03.on('mouseleave', function(){
+       $('img').stop().animate({top:'20px'}, 3000);
+     });
+
 
 
   //  left-box-------------------------------

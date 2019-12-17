@@ -918,6 +918,19 @@
               text-align: center;
               font-size: 20px;
               font-size: 1.25rem; }
+            #portfol-area > .p-wrap-box > .p-right-box > .secound-area > .sec04-t > .text-change > span {
+              display: block;
+              width: 100%;
+              height: 50px;
+              height: 3.125rem;
+              padding: 30px;
+              padding: 1.875rem;
+              font-size: 30px;
+              font-size: 1.875rem;
+              text-align: center;
+              line-height: 30px;
+              line-height: 1.875rem;
+              color: #333; }
           #portfol-area > .p-wrap-box > .p-right-box > .secound-area > .sec04-t > pre {
             padding: 20px;
             padding: 1.25rem;
@@ -986,15 +999,23 @@
         height: auto;
         min-height: 1000px;
         min-height: 62.5rem;
-        background-color: #eee; }
+        background-color: #edd; }
         #portfol-area > .p-wrap-box > .p-right-box > .third-area > p {
+          padding: 30px;
+          padding: 1.875rem;
           width: 80%;
           height: 100px;
           height: 6.25rem;
           margin: auto;
           margin-bottom: 50px;
           margin-bottom: 3.125rem;
-          background-color: #fff; }
+          background-color: rgba(255, 255, 255, 0.5);
+          font-size: 30px;
+          font-size: 1.875rem;
+          text-align: center;
+          line-height: 100px;
+          line-height: 6.25rem;
+          color: #333; }
         #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec01 {
           width: 100%;
           height: auto;
@@ -1015,11 +1036,20 @@
             background-color: #fff; }
           #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec01 > .produc-area {
             float: right;
+            padding: 30px;
+            padding: 1.875rem;
+            box-sizing: border-box;
             width: 50%;
             height: 400px;
             height: 25rem;
-            transform: translateY(10%);
-            background-color: #fff; }
+            transform: translateY(10%); }
+            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec01 > .produc-area > p {
+              width: 100%;
+              height: 100%;
+              margin: auto;
+              font-size: 18px;
+              font-size: 1.125rem;
+              color: #333; }
         #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec02 {
           width: 100%;
           height: auto;
@@ -1032,27 +1062,46 @@
             height: 100%;
             margin: auto;
             clear: both; }
-          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec02 > ul {
+          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec02 > .third-ul {
             position: relative;
-            width: 60%;
+            width: 100%;
             height: 500px;
             height: 31.25rem;
-            margin: auto;
-            background-color: #fff; }
-            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec02 > ul > li {
+            margin: auto; }
+            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec02 > .third-ul > li {
               position: absolute;
               top: 0;
               left: 0;
               width: 100%;
               height: 100%; }
+              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec02 > .third-ul > li > span {
+                display: block;
+                width: auto;
+                height: auto;
+                font-size: 100px;
+                font-size: 6.25rem;
+                text-align: center;
+                line-height: 500px;
+                line-height: 31.25rem;
+                color: #fff;
+                text-shadow: 3px 3px 5px #333; }
           #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec02 > pre {
+            padding: 20px;
+            padding: 1.25rem;
             width: 80%;
             height: 200px;
             height: 12.5rem;
             margin: auto;
             margin-top: 50px;
             margin-top: 3.125rem;
-            background-color: #fff; }
+            background-color: #333;
+            overflow: hidden;
+            overflow-y: auto;
+            color: #06f;
+            font-size: 20px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-transform: lowercase; }
         #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 {
           padding: 30px;
           padding: 1.875rem;
@@ -1064,33 +1113,88 @@
             width: 80%;
             height: 100px;
             height: 6.25rem;
-            margin: auto; }
+            margin: auto;
+            background-color: #f6f1ee; }
             #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > ul > li {
               float: left;
               width: 25%;
               height: 100%;
               margin: auto;
-              background-color: #eee; }
-          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > .content-area {
-            float: left;
-            width: 50%;
+              background-color: transparent; }
+              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > ul > li > span {
+                display: block;
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                text-align: center;
+                line-height: 100px;
+                line-height: 6.25rem;
+                font-size: 30px;
+                font-size: 1.875rem;
+                color: #fff;
+                text-shadow: 3px 3px 5px #333; }
+          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > .conBox {
+            width: 100%;
             height: 500px;
             height: 31.25rem;
-            background-color: #fff; }
-          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > .txt-area {
-            float: left;
-            width: 50%;
-            height: 500px;
-            height: 31.25rem;
-            background-color: #fff; }
+            background-color: #f6f1ee; }
+            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > .conBox > .content-area {
+              float: left;
+              padding: 30px;
+              padding: 1.875rem;
+              box-sizing: border-box;
+              width: 50%;
+              height: 100%; }
+              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > .conBox > .content-area > .third-img-area {
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                background-image: url("../../img/portfolio/third/season00.jpg");
+                background-size: contain;
+                background-position: 50% 50%;
+                background-repeat: no-repeat; }
+            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > .conBox > .txt-area {
+              float: left;
+              padding: 30px;
+              padding: 1.875rem;
+              box-sizing: border-box;
+              width: 50%;
+              height: 100%; }
+              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > .conBox > .txt-area > .third-txt-area {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                background-image: url("../../img/portfolio/third/flower-pattern-02.png");
+                background-size: contain;
+                background-position: 50% 50%;
+                background-repeat: no-repeat; }
+                #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > .conBox > .txt-area > .third-txt-area > span {
+                  display: block;
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  width: 100%;
+                  height: 50%;
+                  text-align: center;
+                  color: #333; }
           #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > pre {
+            padding: 20px;
+            padding: 1.25rem;
             width: 80%;
             height: 200px;
             height: 12.5rem;
             margin: auto;
             margin-top: 50px;
             margin-top: 3.125rem;
-            background-color: #edd; }
+            background-color: #333;
+            overflow: hidden;
+            overflow-y: auto;
+            color: #06f;
+            font-size: 20px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-transform: lowercase; }
           #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03:after {
             content: " ";
             display: block;
@@ -1098,7 +1202,7 @@
             height: 100%;
             margin: auto;
             clear: both; }
-        #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04 {
+        #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third {
           padding: 50px;
           padding: 3.125rem;
           box-sizing: border-box;
@@ -1106,46 +1210,136 @@
           height: auto;
           margin-top: 100px;
           margin-top: 6.25rem;
-          background-color: #fff; }
-          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04 > ul {
+          background-color: rgba(255, 255, 255, 0.5); }
+          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > ul {
             width: 100%;
             height: 400px;
             height: 25rem; }
-            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04 > ul > li {
+            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > ul > .img-li {
               float: left;
               width: 30%;
               height: 100%;
               background-color: #edd;
               margin-left: 5%; }
-              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04 > ul > li:first-child {
-                margin-left: 0; }
-          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04 > .line {
+              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > ul > .img-li:nth-child(1) {
+                margin-left: 0;
+                background-image: url("../../img/portfolio/third/perfume04.jpg");
+                background-size: cover;
+                background-position: 50% 50%;
+                background-repeat: no-repeat; }
+              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > ul > .img-li:nth-child(2) {
+                background-image: url("../../img/portfolio/third/perfume05.jpg");
+                background-size: cover;
+                background-position: 50% 50%;
+                background-repeat: no-repeat; }
+              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > ul > .img-li:nth-child(3) {
+                background-image: url("../../img/portfolio/third/perfume06.jpg");
+                background-size: cover;
+                background-position: 50% 50%;
+                background-repeat: no-repeat; }
+              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > ul > .img-li > p {
+                display: none;
+                width: 100%;
+                height: 20%;
+                background-color: rgba(200, 200, 200, 0.5);
+                transform: translateY(350%);
+                text-align: center;
+                line-height: 80px;
+                line-height: 5rem;
+                color: #fff; }
+          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > .line {
             width: 100%;
-            height: 100px;
-            height: 6.25rem;
+            height: 20px;
+            height: 1.25rem;
             margin-top: 50px;
-            margin-top: 3.125rem; }
-            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04 > .line > li {
-              float: left;
-              width: 33.33333%;
+            margin-top: 3.125rem;
+            border-radius: 30px;
+            border-radius: 1.875rem;
+            background-color: #edd; }
+            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > .line > ul {
+              width: 100%;
               height: 100%;
-              background-color: #edd;
-              margin-left: 0; }
-          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04 > pre {
+              margin: auto; }
+              #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > .line > ul > .line-li {
+                float: left;
+                width: 33.33333%;
+                height: 100%;
+                margin-left: 0;
+                border-radius: 30px;
+                border-radius: 1.875rem; }
+                #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > .line > ul > .line-li > span {
+                  display: block;
+                  width: 25px;
+                  width: 1.5625rem;
+                  height: 25px;
+                  height: 1.5625rem;
+                  border-radius: 100%;
+                  background-color: #fff;
+                  margin: auto;
+                  transform: scale(1.5);
+                  color: #333;
+                  text-align: center; }
+                #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > .line > ul > .line-li.action {
+                  background-color: #fff; }
+                #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > .line > ul > .line-li.action > span {
+                  transform: scale(2);
+                  background-color: #edd; }
+          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec04-third > pre {
+            padding: 20px;
+            padding: 1.25rem;
             width: 80%;
             height: 200px;
             height: 12.5rem;
             margin: auto;
             margin-top: 50px;
             margin-top: 3.125rem;
-            background-color: #edd; }
+            background-color: #333;
+            overflow: hidden;
+            overflow-y: auto;
+            color: #06f;
+            font-size: 20px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-transform: lowercase; }
         #portfol-area > .p-wrap-box > .p-right-box > .third-area > .complete-box {
+          position: relative;
+          padding: 50px;
+          padding: 3.125rem;
+          box-sizing: border-box;
           width: 100%;
           height: 500px;
           height: 31.25rem;
-          margin-top: 50px;
-          margin-top: 3.125rem;
-          background-color: #fff; }
+          margin-top: 100px;
+          margin-top: 6.25rem;
+          background-color: rgba(255, 255, 255, 0.5); }
+          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .complete-box > .complete-img {
+            position: relative;
+            width: 550px;
+            width: 34.375rem;
+            height: 360px;
+            height: 22.5rem;
+            margin: auto;
+            background-color: #333;
+            overflow: hidden; }
+            #portfol-area > .p-wrap-box > .p-right-box > .third-area > .complete-box > .complete-img > img {
+              position: absolute;
+              left: 0;
+              top: 20px;
+              top: 1.25rem;
+              width: 550px;
+              width: 34.375rem;
+              height: auto; }
+          #portfol-area > .p-wrap-box > .p-right-box > .third-area > .complete-box > .macbook {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background-image: url("../../img/portfolio/macbook.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%; }
 
 #study-area {
   display: none;

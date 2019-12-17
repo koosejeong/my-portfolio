@@ -145,6 +145,7 @@
                 }
               } //ul
               &>p{ width:100%; @include conUnit(height, 100); @include conUnit(line-height, 100); background-color:rgba(255,255,255,0.5); text-align:center; @include conUnit(font-size, 20); }
+              &>span{ display:block; width:100%; @include conUnit(height, 50); @include conUnit(padding, 30); @include conUnit(font-size, 30); text-align:center; @include conUnit(line-height, 30); color:#333; }
             } //text-change
             &>pre{ @include conUnit(padding, 20); width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
           } //sec04
@@ -158,41 +159,70 @@
       } //secound-area
         
         
-        &>.third-area{ display:none; position: absolute; top:0; left:0; @include conUnit(padding, 50); box-sizing:border-box; width:100%; height:auto; @include conUnit(min-height, 1000); background-color: #eee;
-          &>p{ width:80%; @include conUnit(height, 100); margin:auto; @include conUnit(margin-bottom, 50); background-color:#fff; }
+        &>.third-area{ display:none; position: absolute; top:0; left:0; @include conUnit(padding, 50); box-sizing:border-box; width:100%; height:auto; @include conUnit(min-height, 1000); background-color:#edd;
+          &>p{ @include conUnit(padding, 30); width:80%; @include conUnit(height, 100); margin:auto; @include conUnit(margin-bottom, 50); background-color:rgba(255,255,255,0.5); @include conUnit(font-size, 30); text-align:center; @include conUnit(line-height, 100); color:#333;  }
           &>.sec01{ width:100%; height:auto; @include conUnit(margin-bottom, 100);
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
             &>.img-area{ float:left; width:50%; @include conUnit(height, 400); background-color: #fff; }
-            &>.produc-area{ float:right; width:50%; @include conUnit(height, 400); transform:translateY(10%);background-color: #fff; }
+            &>.produc-area{ float:right; @include conUnit(padding, 30); box-sizing:border-box; width:50%; @include conUnit(height, 400); transform:translateY(10%);
+              &>p{ @include fullBox; @include conUnit(font-size, 18); color:#333; }
+            }
           } //sec01
           &>.sec02{ width:100%; height:auto; @include conUnit(margin-bottom, 100); 
             &:after{ content:" "; display:block; @include fullBox; clear:both; }
-              &>ul{ position:relative; width:60%; @include conUnit(height, 500); margin:auto; background-color: #fff; 
-                &>li{ position:absolute; top:0; left:0; width:100%; height:100%; }
+              &>.third-ul{ position:relative; width:100%; @include conUnit(height, 500); margin:auto; 
+                &>li{ position:absolute; top:0; left:0; width:100%; height:100%; 
+                  &>span{ display:block; width:auto; height:auto; @include conUnit(font-size, 100); text-align:center; @include conUnit(line-height, 500); color:#fff; text-shadow:3px 3px 5px #333; }
+                }
               } //ul
-              &>pre{ width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#fff; }
+              &>pre{ @include conUnit(padding, 20); width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
             } //sec02 
-            &>.sec03{ @include conUnit(padding, 30); box-sizing:border-box; width:100%; height:auto; background-color: #fff; 
-              &>ul{ width:80%; @include conUnit(height, 100); margin:auto; 
-                &>li{ float:left; width:25%; height:100%; margin:auto; background-color:#eee; }
+            &>.sec03{ @include conUnit(padding, 30); box-sizing:border-box; width:100%; height:auto; background-color: #fff;
+              &>ul{ width:80%; @include conUnit(height, 100); margin:auto; background-color:#f6f1ee;
+                &>li{ float:left; width:25%; height:100%; margin:auto; background-color:transparent; 
+                  &>span{ display:block; @include fullBox; text-align:center; @include conUnit(line-height, 100); @include conUnit(font-size, 30); color:#fff; text-shadow:3px 3px 5px #333; }
+                }
               } //ul
-              &>.content-area{ float:left; width:50%; @include conUnit(height, 500); background-color: #fff; }
-              &>.txt-area{ float:left; width:50%; @include conUnit(height, 500); background-color: #fff; }
-              &>pre{ width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#edd; }
+              &>.conBox{ width:100%; @include conUnit(height, 500); background-color:#f6f1ee;
+                &>.content-area{ float:left; @include conUnit(padding, 30); box-sizing:border-box; width:50%; height:100%;  
+                  &>.third-img-area{ @include fullBox; background-image: url('../../img/portfolio/third/season00.jpg'); background-size:contain; background-position:50% 50%; background-repeat:no-repeat; }
+                } //content-area
+                &>.txt-area{ float:left; @include conUnit(padding, 30); box-sizing:border-box; width:50%; height:100%; 
+                  &>.third-txt-area{ position:relative; @include fullBox; background-image: url('../../img/portfolio/third/flower-pattern-02.png'); background-size:contain; background-position:50% 50%; background-repeat:no-repeat; 
+                    &>span{ display:block; position:absolute; top:50%; left:0; width:100%; height:50%; text-align:center; color:#333; }
+                  } //third-txt-area
+                } //txt-area
+              } //conBox
+              &>pre{ @include conUnit(padding, 20); width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase;  }
             &:after{ content:" "; display:block; @include fullBox; clear:both; }
             } //sec03
-            &>.sec04{ @include conUnit(padding, 50); box-sizing:border-box; width:100%; height:auto; @include conUnit(margin-top, 100); background-color: #fff; 
+            &>.sec04-third{ @include conUnit(padding, 50); box-sizing:border-box; width:100%; height:auto; @include conUnit(margin-top, 100); background-color:rgba(255,255,255,0.5);
               &>ul{ width:100%; @include conUnit(height, 400);
-                &>li{ float:left; width:30%; height:100%; background-color:#edd; margin-left:5%; 
-                &:first-child{ margin-left:0; }
+                &>.img-li{ float:left; width:30%; height:100%; background-color:#edd; margin-left:5%; 
+                &:nth-child(1){ margin-left:0; background-image: url('../../img/portfolio/third/perfume04.jpg'); background-size:cover; background-position:50% 50%; background-repeat:no-repeat; }
+                &:nth-child(2){ background-image: url('../../img/portfolio/third/perfume05.jpg'); background-size:cover; background-position:50% 50%; background-repeat:no-repeat; }
+                &:nth-child(3){ background-image: url('../../img/portfolio/third/perfume06.jpg'); background-size:cover; background-position:50% 50%; background-repeat:no-repeat; }
+                  &>p{ display:none; width:100%; height:20%; background-color:rgba(200,200,200,0.5); transform:translateY(350%); text-align:center; @include conUnit(line-height, 80); color:#fff; }
                 } //li
               } //ul
-              &>.line{ width:100%; @include conUnit(height, 100);  @include conUnit(margin-top, 50);
-                &>li{ float:left; width:100% / $n; height:100%; background-color: #edd; margin-left:0; }
+              &>.line{ width:100%; @include conUnit(height, 20); @include conUnit(margin-top, 50); @include conUnit(border-radius, 30); background-color: #edd;   
+                &>ul{ @include fullBox; 
+                  &>.line-li{ float:left; width:100% / $n; height:100%; margin-left:0; @include conUnit(border-radius, 30); 
+                    &>span{ display:block; @include conUnit(width, 25); @include conUnit(height, 25); border-radius:100%; background-color:#fff; margin:auto; transform: scale(1.5); color:#333; text-align:center; }
+                  &.action{ background-color: #fff; }
+                  &.action>span{ transform: scale(2); background-color:#edd; }
+                  }
+                }
               }
-              &>pre{ width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#edd; }
+              &>pre{ @include conUnit(padding, 20); width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase;  }
             } //sec04
-            &>.complete-box{ width:100%; @include conUnit(height, 500); @include conUnit(margin-top, 50); background-color:#fff; }
+            &>.complete-box{ position:relative; @include conUnit(padding, 50); box-sizing:border-box; width:100%; @include conUnit(height, 500); @include conUnit(margin-top, 100); background-color:rgba(255,255,255,0.5);  
+              &>.complete-img{ position:relative; @include conUnit(width, 550); @include conUnit(height, 360); margin:auto; background-color: #333; overflow:hidden; 
+                &>img{ position:absolute; left:0; @include conUnit(top, 20); @include conUnit(width, 550); height:auto; 
+                }
+              }
+              &>.macbook{ position:absolute; top:0; left:0; @include fullBox; background-image: url('../../img/portfolio/macbook.png'); background-size:contain; background-repeat:no-repeat; background-position:50% 50%; }
+            }
           } //third-area 
 
         } //p-right-box
