@@ -163,7 +163,7 @@
           &>p{ @include conUnit(padding, 30); width:80%; @include conUnit(height, 100); margin:auto; @include conUnit(margin-bottom, 50); background-color:rgba(255,255,255,0.5); @include conUnit(font-size, 30); text-align:center; @include conUnit(line-height, 100); color:#333;  }
           &>.sec01{ width:100%; height:auto; @include conUnit(margin-bottom, 100);
           &:after{ content:" "; display:block; @include fullBox; clear:both; }
-            &>.img-area{ float:left; width:50%; @include conUnit(height, 400); background-color: #fff; }
+            &>.img-area{ float:left; width:50%; @include conUnit(height, 400); background-image: url('../../img/portfolio/third/third-wire-frame.png'); background-size:cover; background-repeat:no-repeat; background-position:50% 50%; }
             &>.produc-area{ float:right; @include conUnit(padding, 30); box-sizing:border-box; width:50%; @include conUnit(height, 400); transform:translateY(10%);
               &>p{ @include fullBox; @include conUnit(font-size, 18); color:#333; }
             }
@@ -178,7 +178,7 @@
               &>pre{ @include conUnit(padding, 20); width:80%; @include conUnit(height, 200); margin:auto; @include conUnit(margin-top, 50); background-color:#333; overflow:hidden; overflow-y:auto; color:#06f; @include conUnit(font-size, 20); font-weight:bold; text-transform:lowercase; }
             } //sec02 
             &>.sec03{ @include conUnit(padding, 30); box-sizing:border-box; width:100%; height:auto; background-color: #fff;
-              &>ul{ width:80%; @include conUnit(height, 100); margin:auto; background-color:#f6f1ee;
+              &>ul{ width:100%; @include conUnit(height, 100); margin:auto; background-color:#f6f1ee;
                 &>li{ float:left; width:25%; height:100%; margin:auto; background-color:transparent; 
                   &>span{ display:block; @include fullBox; text-align:center; @include conUnit(line-height, 100); @include conUnit(font-size, 30); color:#fff; text-shadow:3px 3px 5px #333; }
                 }

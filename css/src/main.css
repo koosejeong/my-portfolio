@@ -1033,7 +1033,10 @@
             width: 50%;
             height: 400px;
             height: 25rem;
-            background-color: #fff; }
+            background-image: url("../../img/portfolio/third/third-wire-frame.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%; }
           #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec01 > .produc-area {
             float: right;
             padding: 30px;
@@ -1110,7 +1113,7 @@
           height: auto;
           background-color: #fff; }
           #portfol-area > .p-wrap-box > .p-right-box > .third-area > .sec03 > ul {
-            width: 80%;
+            width: 100%;
             height: 100px;
             height: 6.25rem;
             margin: auto;
@@ -1367,34 +1370,41 @@
       border-radius: 10px;
       border-radius: 0.625rem; }
       #study-area > .s-wrap-box > .s-left-box > ul {
-        padding: 10px;
-        padding: 0.625rem;
+        padding: 30px;
+        padding: 1.875rem;
         box-sizing: border-box;
         width: 100%;
         height: 100%;
         margin: auto; }
         #study-area > .s-wrap-box > .s-left-box > ul > li {
           width: 100%;
-          padding: 20px;
-          padding: 1.25rem;
+          height: auto;
+          padding: 10px;
+          padding: 0.625rem;
           box-sizing: border-box;
           background-color: #fff;
           border-radius: 20px;
           border-radius: 1.25rem;
           line-height: 30px;
           line-height: 1.875rem; }
-          #study-area > .s-wrap-box > .s-left-box > ul > li:nth-child(1) {
-            height: 10%;
-            margin-top: 10%; }
-          #study-area > .s-wrap-box > .s-left-box > ul > li:nth-child(2) {
-            height: 10%;
-            margin-top: 10%; }
-          #study-area > .s-wrap-box > .s-left-box > ul > li:nth-child(3) {
-            height: 10%;
-            margin-top: 10%; }
-          #study-area > .s-wrap-box > .s-left-box > ul > li:nth-child(4) {
-            height: 10%;
-            margin-top: 10%; }
+          #study-area > .s-wrap-box > .s-left-box > ul > li > dl {
+            width: 100%;
+            height: auto;
+            background-color: #eed;
+            border-radius: 20px;
+            border-radius: 1.25rem; }
+            #study-area > .s-wrap-box > .s-left-box > ul > li > dl > dt {
+              width: 100%;
+              height: 30px;
+              height: 1.875rem; }
+            #study-area > .s-wrap-box > .s-left-box > ul > li > dl > dd {
+              width: 100%;
+              height: auto; }
+            #study-area > .s-wrap-box > .s-left-box > ul > li > dl a {
+              display: block;
+              width: 100%;
+              height: 30px;
+              height: 1.875rem; }
     #study-area > .s-wrap-box > .s-right-box {
       float: right;
       position: relative;

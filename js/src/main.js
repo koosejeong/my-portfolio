@@ -307,7 +307,7 @@
      let thirdTabImg = [ 'season01.jpg', 'season02.jpg' ,
      'season03.jpg', 'season04.jpg' ];
 
-     let thirdTabTxt = [ '내가 클릭한', '탭에 맞는',
+     let thirdTabTxt = [ '내가 선택한', '탭에 맞는',
      '문구와 이미지가', '나타납니다' ];
      
      for(let i=0; i<thirdLen; i++){
@@ -329,7 +329,7 @@
         });
      },5000);
 
-     thirdLi02.on('click', function(){
+     thirdLi02.on('mouseenter', function(){
       let i = $(this).index();
       thirdImg.css({backgroundImage:`url(${thirdUrl+thirdTabImg[i]})`});
       thirdSpan.text(thirdTabTxt[i]);
