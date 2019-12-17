@@ -1,2 +1,44 @@
-
- #main-area{ position:absolute; @include conUnit(top, 100); left:0; width:100%; @include conUnit(height, 1000); background-color:#edd; }
+$w:7; $h:5;
+ #main-area{ position:absolute; @include conUnit(top, 100); left:0; @include conUnit(padding, 100); box-sizing:border-box; width:100%; @include conUnit(height, 1000); background-color:#edd; 
+  &>.calenda{ position:relative; width:100%; height:100%; background-color:#fff; 
+    &>.december{ @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; 
+      &>.day{ width:100%; @include conUnit(height, 50);
+        &>li{ float:left; width:100% / $w; height:100%; border:1px solid #ddd; box-sizing:border-box; 
+          &>span{ display:block; width:100%; height:auto; text-align:center; @include conUnit(line-height, 50); color:#faa; @include conUnit(font-size, 18);  }
+        } //li
+      } //day
+      &>ul{ width:100%; height:100% / $h;  
+        &>li{ position:relative; float:left; width:100% / $w; height:100%; border:1px solid #ddd; box-sizing:border-box; 
+        &:first-child>span{ color:#f00; }
+          &>span{ display:block; @include conUnit(width, 30); @include conUnit(height, 30); @include conUnit(font-size, 16); @include conUnit(line-height, 30); text-align:center;
+          &.action{ @include conUnit(border-radius, 30); background-color:#edd; color:#fff; }
+          } //span
+          &>p{ display:none; position:absolute; top:20%; left:0; width:100%; @include conUnit(height, 100); text-align:center; @include conUnit(line-height, 100);  
+          }
+        } //li
+      } //ul
+    } //december
+    &>.january{ display:none; position: absolute; top:0; left:0; @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; background-color: #fff; 
+      &>.j-day{ width:100%; @include conUnit(height, 50);
+        &>li{ float:left; width:100% / $w; height:100%; border:1px solid #ddd; box-sizing:border-box; 
+          &>span{ display:block; width:100%; height:auto; text-align:center; @include conUnit(line-height, 50); color:#faa; @include conUnit(font-size, 18);  }
+        } //li
+      } //j-day
+      &>ul{ width:100%; height:100% / $h;  
+        &>li{ position:relative; float:left; width:100% / $w; height:100%; border:1px solid #ddd; box-sizing:border-box; 
+          &:first-child>span{ color:#f00; }
+          &>span{ display:block; @include conUnit(width, 30); @include conUnit(height, 30); @include conUnit(font-size, 16); @include conUnit(line-height, 30); text-align:center;
+          &.action{ @include conUnit(border-radius, 30); background-color:#edd; color:#fff; }
+          } //span
+          &>p{ display:none; position:absolute; top:20%; left:0; width:100%; @include conUnit(height, 100); text-align:center; @include conUnit(line-height, 100); }
+        } //li
+      } //ul
+    } //january
+  } //calenda
+  &>.btn{ position:absolute; @include conUnit(bottom, 20); right:5%; width:10%; height:5%;  
+    &>button{ float:right; width:50%; height:100%; background-color:transparent; 
+    &.prev{ float:left; }
+      &>i{ @include conUnit(font-size, 40); color:#fff; }
+    } //button
+  } //btn
+} //main-area

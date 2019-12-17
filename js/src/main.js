@@ -10,6 +10,19 @@
   const myLi = myUl.children('li');
   const myTab = myLi.children('a');
 
+  // main ------
+
+  const myIntro = $('#main-area');
+  const calenda = myIntro.children('.calenda');
+  const dec = calenda.children('.december');
+  const noUl = calenda.find('.week');
+  const noLi = noUl.children('li');
+  const jan = calenda.children('.january');
+  const jUl = jan.children('.j-week');
+  const jLi = jUl.children('li');
+  const calBtn = myIntro.children('.btn');
+  const btn = calBtn.children('button');
+
   // resume ----
   const myResume = myfull.children('#resume-area');
   const resumeBtn = myResume.find('.btn-area');
@@ -39,6 +52,47 @@
 
   });
   // main 영역----------------------------
+
+  // data 불러오기--------------------
+  let jSonUrl = './data/schedule.json';
+  let rel = null;
+  $.ajax({
+    async:false,
+    dataType:'json',
+    url:jSonUrl,
+    success: function(data){
+      return rel= data;}  
+  });
+  console.log(rel);
+  // -------------------------------
+
+  noLi.append('<p></p>');
+  jLi.append('<p></p>');
+
+  //console.log(rel[0]);
+  for(let i=0; i<noLi.length; i++){
+    noLi.eq(i).children('p').text(rel.schedule[i]);
+  }
+
+  noLi.on('mouseenter', function(){
+    noLi.children('span').removeClass('action');
+    $(this).children('span').addClass('action');
+    noLi.children('p').css({ color:'#333'});
+    //noLi.eq(0).children('span').css({ color:'#f00'});
+    $(this).children('p').css({ display:'block', color:'#f00'});
+  });
+  
+  btn.on('click', function(e){
+    e.preventDefault();
+    let hasC = $(this).hasClass('next');
+    if( hasC ){
+      dec.css({display:'none'});
+      jan.css({display:'block'});
+    } else {
+      dec.css({display:'block'});
+      jan.css({display:'none'});
+    }
+  });
 
   // resume 영역--------------------------
 
