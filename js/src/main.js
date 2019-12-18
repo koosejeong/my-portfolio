@@ -22,6 +22,7 @@
   const jLi = jUl.children('li');
   const calBtn = myIntro.children('.btn');
   const btn = calBtn.children('button');
+  
 
   // resume ----
   const myResume = myfull.children('#resume-area');
@@ -40,7 +41,16 @@
   const firstArea = pRightArea.children('.first-area');
   const seconArea = pRightArea.children('.secound-area');
   const thirdArea = pRightArea.children('.third-area');
+
+    // study ---
   
+  const myStudy = $('#study-area');
+  const studyUl = myStudy.find('.s-left-box');
+  const studyDt = studyUl.find('dt');
+  const studyDd = studyUl.find('dd');
+  const dTLink = studyDt.children('a');
+  const ddLink = studyDd.children('a');
+  const ingArea = myStudy.find('.ing-area');
 
   // header 영역----------------------------
   myTab.on('click focus', function(e){
@@ -71,13 +81,24 @@
 
   //console.log(rel[0]);
   for(let i=0; i<noLi.length; i++){
-    noLi.eq(i).children('p').text(rel.schedule[i]);
+    noLi.eq(i).children('p').text(rel.dec[i]);
+  }
+  for(let i=0; i<jLi.length; i++){
+    jLi.eq(i).children('p').text(rel.jan[i]);
   }
 
   noLi.on('mouseenter', function(){
     noLi.children('span').removeClass('action');
     $(this).children('span').addClass('action');
     noLi.children('p').css({ color:'#333'});
+    //noLi.eq(0).children('span').css({ color:'#f00'});
+    $(this).children('p').css({ display:'block', color:'#f00'});
+  });
+
+  jLi.on('mouseenter', function(){
+    jLi.children('span').removeClass('action');
+    $(this).children('span').addClass('action');
+    jLi.children('p').css({ color:'#333'});
     //noLi.eq(0).children('span').css({ color:'#f00'});
     $(this).children('p').css({ display:'block', color:'#f00'});
   });
@@ -171,7 +192,7 @@
     let scrollLoc = firstScroll.offset().top;
     if( scrollLoc > 100){
       $('.area02').addClass('action');
-    }
+    } 
   });
 
   let imgBox = [ 'valy02.jpg', 'kota02.jpg', 'manyla02.jpg' ];
@@ -443,5 +464,19 @@
 
 
   // study 영역---------------------------
+
+  ddLink.on('click focus', function(e){
+    e.preventDefault();
+    let i = $(this).parent('dd').index();
+    console.log(i);
+    let StrudyUrl = `./img/study/`;
+    if( i == 2 ){
+      ingArea.css({backgroundImage:`url(${StrudyUrl+'loading-01.png'})`});
+    } else if( i == 5 ){
+      ingArea.css({backgroundImage:`url(${StrudyUrl+'loading-02.png'})`});
+    } else if( i == 8) {
+      ingArea.css({backgroundImage:`url(${StrudyUrl+'loading-03.png'})`});
+    }
+  });
 
 })(jQuery);

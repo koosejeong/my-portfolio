@@ -3,11 +3,11 @@
   &>.wrap-box{ @include conUnit(padding, 20); box-sizing:border-box; @include fullBox; 
     &>.left-box{ float:left; margin-right:3%; width:20%; height:100%; background-color:#d3c2c2; @include conUnit(border-radius, 10); 
       &>ul{ @include conUnit(padding, 20); box-sizing:border-box; @include fullBox; 
-        &>li{ width:100%; background-color: #fff; @include conUnit(border-radius, 20);
-        &:nth-child(1){ height:50%; margin-top:10%; }
-        &:nth-child(2){ height:10%; margin-top:10%; }
-        &:nth-child(3){ height:10%; margin-top:10%; }
-        &:nth-child(4){ height:10%; margin-top:10%; }
+        &>li{ width:100%; @include conUnit(border-radius, 20);
+        &:nth-child(1){ height:50%; margin-top:10%; background-image: url('../../img/resume/mememe.png'); background-size:contain; background-position:50% 50%; background-repeat: no-repeat; }
+        &:nth-child(2){ height:10%; margin-top:10%; background-color:#fff; }
+        &:nth-child(3){ height:10%; margin-top:10%; background-color:#fff; }
+        &:nth-child(4){ height:10%; margin-top:10%; background-color:#fff; }
           &>span{ display:block; padding:20px 20px 0 20px; width:100%; height:auto; 
           &:nth-of-type(2){ padding:0 20px 0 20px; text-transform:lowercase; }
           }

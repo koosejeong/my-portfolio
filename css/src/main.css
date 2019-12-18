@@ -282,21 +282,27 @@
         margin: auto; }
         #resume-area > .wrap-box > .left-box > ul > li {
           width: 100%;
-          background-color: #fff;
           border-radius: 20px;
           border-radius: 1.25rem; }
           #resume-area > .wrap-box > .left-box > ul > li:nth-child(1) {
             height: 50%;
-            margin-top: 10%; }
+            margin-top: 10%;
+            background-image: url("../../img/resume/mememe.png");
+            background-size: contain;
+            background-position: 50% 50%;
+            background-repeat: no-repeat; }
           #resume-area > .wrap-box > .left-box > ul > li:nth-child(2) {
             height: 10%;
-            margin-top: 10%; }
+            margin-top: 10%;
+            background-color: #fff; }
           #resume-area > .wrap-box > .left-box > ul > li:nth-child(3) {
             height: 10%;
-            margin-top: 10%; }
+            margin-top: 10%;
+            background-color: #fff; }
           #resume-area > .wrap-box > .left-box > ul > li:nth-child(4) {
             height: 10%;
-            margin-top: 10%; }
+            margin-top: 10%;
+            background-color: #fff; }
           #resume-area > .wrap-box > .left-box > ul > li > span {
             display: block;
             padding: 20px 20px 0 20px;
@@ -1522,6 +1528,15 @@
   height: 1000px;
   height: 62.5rem;
   background-color: #c7b7b7; }
+  #study-area > p {
+    position: absolute;
+    bottom: 50px;
+    bottom: 3.125rem;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    font-size: 1.25rem;
+    text-align: center; }
   #study-area > .s-wrap-box {
     padding: 50px;
     padding: 3.125rem;
@@ -1558,7 +1573,6 @@
           #study-area > .s-wrap-box > .s-left-box > ul > li > dl {
             width: 100%;
             height: auto;
-            background-color: #eed;
             border-radius: 20px;
             border-radius: 1.25rem; }
             #study-area > .s-wrap-box > .s-left-box > ul > li > dl > dt {
@@ -1581,9 +1595,43 @@
       box-sizing: border-box;
       width: 75%;
       height: 100%;
-      background-color: #eee;
       overflow: hidden; }
-      #study-area > .s-wrap-box > .s-right-box > .s-work-area {
+      #study-area > .s-wrap-box > .s-right-box > .ing-area {
         width: 100%;
-        height: 700%;
+        height: 100%;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.5);
+        background-image: url("../../img/study/loading-01.png");
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat; }
+      #study-area > .s-wrap-box > .s-right-box > .s-work-area {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: ahto;
+        min-height: 1000px;
+        min-height: 62.5rem;
         overflow-y: auto; }
+        #study-area > .s-wrap-box > .s-right-box > .s-work-area > .naver-make {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+        #study-area > .s-wrap-box > .s-right-box > .s-work-area > .bingre-make {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+        #study-area > .s-wrap-box > .s-right-box > .s-work-area > .some-make {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
