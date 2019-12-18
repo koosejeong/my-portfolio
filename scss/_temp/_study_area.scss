@@ -1,15 +1,15 @@
 $c:7;
-  #study-area{ display:none; position:absolute; @include conUnit(top, 100); left:0; width:100%; @include conUnit(height, 1000); background-color:rgb(199, 183, 183); 
-    &>p{ position:absolute; @include conUnit(bottom, 50); width:100%; height:auto; @include conUnit(font-size, 20); text-align:center; }
+  #study-area{ display:none; position:absolute; @include conUnit(top, 100); left:0; width:100%; @include conUnit(height, 1000); /* background-color:rgb(199, 183, 183); */ background-color:#92a5bc;
+    &>p{ position:absolute; @include conUnit(bottom, 50); width:100%; height:auto; @include conUnit(font-size, 20); text-align:right; font-family: 'Nanum Gothic Coding', monospace; font-weight:bold; }
     &>.s-wrap-box{ @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; 
-      &>.s-left-box{ float:left; margin-right:3%; width:20%; height:100%; background-color:#d3c2c2; @include conUnit(border-radius, 10); 
+      &>.s-left-box{ float:left; margin-right:3%; width:20%; height:100%; background-color:#74889e; @include conUnit(border-radius, 10); 
         &>ul{ @include conUnit(padding, 30); box-sizing:border-box; @include fullBox; 
           &>li{ width:100%; height:auto; @include conUnit(padding, 10); box-sizing:border-box; background-color: #fff; @include conUnit(border-radius, 20); @include conUnit(line-height, 30);
             &>dl{ width:100%; height:auto; @include conUnit(border-radius, 20); 
-              &>dt{ width:100%; @include conUnit(height, 30); }
-              &>dd{ width:100%; height:auto; 
+              &>dt{ width:100%; @include conUnit(height, 30); background-color:#000033; @include conUnit(border-radius, 10); @include conUnit(margin-bottom, 5); }
+              &>dd{ width:100%; height:auto; background-color:#000033; @include conUnit(border-radius, 10);
               }
-              & a{ display:block; width:100%; @include conUnit(height, 30); }
+              & a{ display:block; width:100%; @include conUnit(height, 30); text-align:center; color:#fff; font-weight:bold; font-family: 'Nanum Gothic Coding', monospace; }
             }
           } //li
         } //ul 

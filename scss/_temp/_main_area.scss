@@ -1,5 +1,5 @@
 $w:7; $h:5;
- #main-area{ position:absolute; @include conUnit(top, 100); left:0; @include conUnit(padding, 100); box-sizing:border-box; width:100%; @include conUnit(height, 1000); background-color:#edd; 
+ #main-area{ position:absolute; @include conUnit(top, 100); left:0; @include conUnit(padding, 100); box-sizing:border-box; width:100%; @include conUnit(height, 1000); /* background-color:#edd; */ background-color:#abb7d8;
   &>.calenda{ position:relative; width:100%; height:100%; background-color:#fff; 
     &>.december{ @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; 
       &>.day{ width:100%; @include conUnit(height, 50);
@@ -11,7 +11,7 @@ $w:7; $h:5;
         &>li{ position:relative; float:left; width:100% / $w; height:100%; border:1px solid #ddd; box-sizing:border-box; 
         &:first-child>span{ color:#f00; }
           &>span{ display:block; @include conUnit(width, 30); @include conUnit(height, 30); @include conUnit(font-size, 16); @include conUnit(line-height, 30); text-align:center;
-          &.action{ @include conUnit(border-radius, 30); background-color:#edd; color:#fff; }
+          &.action{ @include conUnit(border-radius, 30); background-color:#abb7d8; color:#fff; }
           } //span
           &>p{ display:none; position:absolute; top:20%; left:0; width:100%; @include conUnit(height, 100); text-align:center; @include conUnit(line-height, 100);  
           }

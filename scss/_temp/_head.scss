@@ -1,14 +1,16 @@
 // head.scss
 
 #headBox{ position:absolute; top:0; left:0; padding:20px 50px 0 20px; box-sizing:border-box; width:100%;  @include conUnit(height, 100); background-color:rgba(255,255,255,0.5); 
-  &>h1{ float:left; width:20%; height:80%; background-color:#eee; }
+  &>h1{ float:left; width:20%; height:80%; }
   &>#gnb{ float:right; width:70%; height:100%;  
   &>ul{ @include fullBox; 
     &>li{ float:left; width:25%; height:100%; border-radius:20px 20px 0 0; 
-    &:nth-child(1){ background-color:#edd;}
-    &:nth-child(2){ background-color:rgb(231, 216, 216);}
-    &:nth-child(3){ background-color:rgb(211, 194, 194);}
-    &:nth-child(4){ background-color:rgb(199, 183, 183);}
+    &:nth-child(1){ background-color:#abb7d8;}
+    &:nth-child(2){ background-color:#0a1632; 
+      & span{ color:#fff; }
+    }
+    &:nth-child(3){ background-color:#4c5e77; }
+    &:nth-child(4){ background-color:#92a5bc; }
       &>a{ display:block; @include fullBox; 
         &>span{ display:block; @include fullBox; text-align:center; transform:translateY(40%); @include conUnit(font-size, 20); color:#000; }
         } //a

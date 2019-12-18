@@ -23,8 +23,7 @@
   #headBox > h1 {
     float: left;
     width: 20%;
-    height: 80%;
-    background-color: #eee; }
+    height: 80%; }
   #headBox > #gnb {
     float: right;
     width: 70%;
@@ -39,13 +38,15 @@
         height: 100%;
         border-radius: 20px 20px 0 0; }
         #headBox > #gnb > ul > li:nth-child(1) {
-          background-color: #edd; }
+          background-color: #abb7d8; }
         #headBox > #gnb > ul > li:nth-child(2) {
-          background-color: #e7d8d8; }
+          background-color: #0a1632; }
+          #headBox > #gnb > ul > li:nth-child(2) span {
+            color: #fff; }
         #headBox > #gnb > ul > li:nth-child(3) {
-          background-color: #d3c2c2; }
+          background-color: #4c5e77; }
         #headBox > #gnb > ul > li:nth-child(4) {
-          background-color: #c7b7b7; }
+          background-color: #92a5bc; }
         #headBox > #gnb > ul > li > a {
           display: block;
           width: 100%;
@@ -83,7 +84,8 @@
   width: 100%;
   height: 1000px;
   height: 62.5rem;
-  background-color: #edd; }
+  /* background-color:#edd; */
+  background-color: #abb7d8; }
   #main-area > .calenda {
     position: relative;
     width: 100%;
@@ -142,7 +144,7 @@
             #main-area > .calenda > .december > ul > li > span.action {
               border-radius: 30px;
               border-radius: 1.875rem;
-              background-color: #edd;
+              background-color: #abb7d8;
               color: #fff; }
           #main-area > .calenda > .december > ul > li > p {
             display: none;
@@ -257,7 +259,8 @@
   width: 100%;
   height: 1000px;
   height: 62.5rem;
-  background-color: #e7d8d8; }
+  /* background-color:rgb(231, 216, 216); */
+  background-color: #0a1632; }
   #resume-area > .wrap-box {
     padding: 20px;
     padding: 1.25rem;
@@ -270,7 +273,8 @@
       margin-right: 3%;
       width: 20%;
       height: 100%;
-      background-color: #d3c2c2;
+      /* background-color:#2b333d; */
+      background-color: #b1dcdd;
       border-radius: 10px;
       border-radius: 0.625rem; }
       #resume-area > .wrap-box > .left-box > ul {
@@ -287,10 +291,11 @@
           #resume-area > .wrap-box > .left-box > ul > li:nth-child(1) {
             height: 50%;
             margin-top: 10%;
-            background-image: url("../../img/resume/mememe.png");
-            background-size: contain;
-            background-position: 50% 50%;
-            background-repeat: no-repeat; }
+            background-image: url("../../img/resume/my-logo.png");
+            background-size: cover;
+            background-position: 70% 50%;
+            background-repeat: no-repeat;
+            background-color: #fff; }
           #resume-area > .wrap-box > .left-box > ul > li:nth-child(2) {
             height: 10%;
             margin-top: 10%;
@@ -348,7 +353,7 @@
             #resume-area > .wrap-box > .right-box > .visible-box > .btn-area > button > i {
               font-size: 100px;
               font-size: 6.25rem;
-              color: #d3c2c2; }
+              color: #fff; }
       #resume-area > .wrap-box > .right-box > .hidden-box {
         position: absolute;
         top: 0;
@@ -361,7 +366,8 @@
         background-position: 50% 50%;
         background-repeat: no-repeat;
         transition: all 500ms ease;
-        background-color: #2b333d; }
+        /* background-color: #2b333d;*/
+        background-color: #b1dcdd; }
 
 #portfol-area {
   display: none;
@@ -372,7 +378,8 @@
   width: 100%;
   height: 1000px;
   height: 62.5rem;
-  background-color: #d3c2c2; }
+  /* background-color:rgb(211, 194, 194); */
+  background-color: #4c5e77; }
   #portfol-area > .p-wrap-box {
     position: relative;
     padding: 50px;
@@ -397,7 +404,8 @@
       margin-right: 3%;
       width: 20%;
       height: 100%;
-      background-color: #d3c2c2;
+      /* background-color:#d3c2c2; */
+      background-color: #2f4463;
       border-radius: 10px;
       border-radius: 0.625rem; }
       #portfol-area > .p-wrap-box > .p-left-box > ul {
@@ -442,10 +450,11 @@
               font-size: 16px;
               font-size: 1rem;
               font-family: 'Nanum Gothic Coding', monospace;
-              color: #000;
+              color: #fff;
               border-radius: 20px;
               border-radius: 1.25rem;
-              background-color: #c7b7b7;
+              background-color: #000033;
+              font-weight: bold;
               margin-bottom: 10px;
               margin-bottom: 0.625rem; }
           #portfol-area > .p-wrap-box > .p-left-box > ul > li > button {
@@ -455,11 +464,12 @@
             text-align: center;
             font-size: 16px;
             font-size: 1rem;
-            color: #000;
+            color: #fff;
             border-radius: 20px;
             border-radius: 1.25rem;
-            background-color: #d3c2c2;
-            font-family: 'Nanum Gothic Coding', monospace; }
+            background-color: #000033;
+            font-family: 'Nanum Gothic Coding', monospace;
+            font-weight: bold; }
     #portfol-area > .p-wrap-box > .p-right-box {
       float: right;
       position: relative;
@@ -494,7 +504,7 @@
         height: auto;
         min-height: 1000px;
         min-height: 62.5rem;
-        background-color: #edd; }
+        background-color: transparent; }
         #portfol-area > .p-wrap-box > .p-right-box > .first-area > p {
           padding: 30px;
           padding: 1.875rem;
@@ -781,8 +791,7 @@
           height: 500px;
           height: 31.25rem;
           margin-top: 150px;
-          margin-top: 9.375rem;
-          background-color: rgba(255, 255, 255, 0.5); }
+          margin-top: 9.375rem; }
           #portfol-area > .p-wrap-box > .p-right-box > .first-area > .complete-box > .complete-img {
             position: relative;
             width: 550px;
@@ -823,7 +832,7 @@
         height: auto;
         min-height: 1000px;
         min-height: 62.5rem;
-        background-color: #edd; }
+        background-color: transparent; }
         #portfol-area > .p-wrap-box > .p-right-box > .secound-area > p {
           padding: 30px;
           padding: 1.875rem;
@@ -1131,8 +1140,7 @@
           height: 500px;
           height: 31.25rem;
           margin-top: 150px;
-          margin-top: 9.375rem;
-          background-color: rgba(255, 255, 255, 0.5); }
+          margin-top: 9.375rem; }
           #portfol-area > .p-wrap-box > .p-right-box > .secound-area > .complete-box > .complete-img {
             position: relative;
             width: 550px;
@@ -1173,7 +1181,7 @@
         height: auto;
         min-height: 1000px;
         min-height: 62.5rem;
-        background-color: #edd; }
+        background-color: transparent; }
         #portfol-area > .p-wrap-box > .p-right-box > .third-area > p {
           padding: 30px;
           padding: 1.875rem;
@@ -1487,8 +1495,7 @@
           height: 500px;
           height: 31.25rem;
           margin-top: 100px;
-          margin-top: 6.25rem;
-          background-color: rgba(255, 255, 255, 0.5); }
+          margin-top: 6.25rem; }
           #portfol-area > .p-wrap-box > .p-right-box > .third-area > .complete-box > .complete-img {
             position: relative;
             width: 550px;
@@ -1527,7 +1534,8 @@
   width: 100%;
   height: 1000px;
   height: 62.5rem;
-  background-color: #c7b7b7; }
+  /* background-color:rgb(199, 183, 183); */
+  background-color: #92a5bc; }
   #study-area > p {
     position: absolute;
     bottom: 50px;
@@ -1536,7 +1544,9 @@
     height: auto;
     font-size: 20px;
     font-size: 1.25rem;
-    text-align: center; }
+    text-align: right;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-weight: bold; }
   #study-area > .s-wrap-box {
     padding: 50px;
     padding: 3.125rem;
@@ -1549,7 +1559,7 @@
       margin-right: 3%;
       width: 20%;
       height: 100%;
-      background-color: #d3c2c2;
+      background-color: #74889e;
       border-radius: 10px;
       border-radius: 0.625rem; }
       #study-area > .s-wrap-box > .s-left-box > ul {
@@ -1578,15 +1588,27 @@
             #study-area > .s-wrap-box > .s-left-box > ul > li > dl > dt {
               width: 100%;
               height: 30px;
-              height: 1.875rem; }
+              height: 1.875rem;
+              background-color: #000033;
+              border-radius: 10px;
+              border-radius: 0.625rem;
+              margin-bottom: 5px;
+              margin-bottom: 0.3125rem; }
             #study-area > .s-wrap-box > .s-left-box > ul > li > dl > dd {
               width: 100%;
-              height: auto; }
+              height: auto;
+              background-color: #000033;
+              border-radius: 10px;
+              border-radius: 0.625rem; }
             #study-area > .s-wrap-box > .s-left-box > ul > li > dl a {
               display: block;
               width: 100%;
               height: 30px;
-              height: 1.875rem; }
+              height: 1.875rem;
+              text-align: center;
+              color: #fff;
+              font-weight: bold;
+              font-family: 'Nanum Gothic Coding', monospace; }
     #study-area > .s-wrap-box > .s-right-box {
       float: right;
       position: relative;

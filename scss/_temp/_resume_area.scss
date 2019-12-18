@@ -1,10 +1,10 @@
 
-#resume-area{ display:none; position:absolute; @include conUnit(top, 100); left:0; @include conUnit(padding, 30); box-sizing:border-box; width:100%; @include conUnit(height, 1000); background-color:rgb(231, 216, 216); 
+#resume-area{ display:none; position:absolute; @include conUnit(top, 100); left:0; @include conUnit(padding, 30); box-sizing:border-box; width:100%; @include conUnit(height, 1000); /* background-color:rgb(231, 216, 216); */ background-color:#0a1632;
   &>.wrap-box{ @include conUnit(padding, 20); box-sizing:border-box; @include fullBox; 
-    &>.left-box{ float:left; margin-right:3%; width:20%; height:100%; background-color:#d3c2c2; @include conUnit(border-radius, 10); 
+    &>.left-box{ float:left; margin-right:3%; width:20%; height:100%; /* background-color:#2b333d; */ background-color:#b1dcdd; @include conUnit(border-radius, 10); 
       &>ul{ @include conUnit(padding, 20); box-sizing:border-box; @include fullBox; 
         &>li{ width:100%; @include conUnit(border-radius, 20);
-        &:nth-child(1){ height:50%; margin-top:10%; background-image: url('../../img/resume/mememe.png'); background-size:contain; background-position:50% 50%; background-repeat: no-repeat; }
+        &:nth-child(1){ height:50%; margin-top:10%; background-image: url('../../img/resume/my-logo.png'); background-size:cover; background-position:70% 50%; background-repeat:no-repeat; background-color:#fff; }
         &:nth-child(2){ height:10%; margin-top:10%; background-color:#fff; }
         &:nth-child(3){ height:10%; margin-top:10%; background-color:#fff; }
         &:nth-child(4){ height:10%; margin-top:10%; background-color:#fff; }
@@ -18,11 +18,11 @@
       &>.visible-box{ position:absolute; top:0; left:0; @include fullBox; background-image: url('../../img/resume/resume02-01.png'); background-size:contain; background-position:50% 50%; background-repeat: no-repeat; transition:all 500ms ease; background-color: #b1dcdd;
         &>.btn-area{ position:absolute; top:50%; right:5%; transform:translateY(-50%); z-index:100; width:auto; height:auto; 
           &>button{ @include conUnit(width, 100); @include conUnit(height, 100); background-color:transparent; 
-            &>i{ @include conUnit(font-size, 100); color:#d3c2c2; }
+            &>i{ @include conUnit(font-size, 100); color:#fff; }
           }
         }
       }
-      &>.hidden-box{ position:absolute; top:0; left:200%; @include fullBox; background-image: url('../../img/resume/resume02-02.png'); background-size:contain; background-position:50% 50%; background-repeat: no-repeat; transition:all 500ms ease; background-color: #2b333d; }
+      &>.hidden-box{ position:absolute; top:0; left:200%; @include fullBox; background-image: url('../../img/resume/resume02-02.png'); background-size:contain; background-position:50% 50%; background-repeat: no-repeat; transition:all 500ms ease; /* background-color: #2b333d;*/ background-color:#b1dcdd; }
     }
   }
 }
